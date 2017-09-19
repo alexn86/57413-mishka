@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Никольский](https://up.htmlacademy.ru/adaptive/12/user/57413).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Собакарь](https://up.htmlacademy.ru/adaptive/12/user/128451).
 
 ---
 
