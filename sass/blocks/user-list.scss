@@ -1,0 +1,35 @@
+.user-list {
+  &__item {
+    padding: 0 30px;
+  }
+
+  &__link {
+    min-height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 17px;
+    line-height: (24/17);
+    font-weight: bold;
+    text-decoration: none;
+    color: $secondary;
+    border-top: 1px solid #ececec;
+  }
+
+  &__link:hover {
+    color: #8d8d8d;
+  }
+
+  &__link:active {
+    color: #cacaca;
+  }
+
+  &__icon {
+    padding-right: 25px;
+  }
+
+  &__icon-pic {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,13 @@
+.order-form {
+  &__desc {
+    font-size: 13px;
+    line-height: (24/13);
+    margin-bottom: 30px;
+  }
+
+  &__send-button {
+    background: none;
+    width: 100%;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,11 @@
+.main-nav {
+
+  &__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+}

@@ -1,0 +1,23 @@
+.reviews {
+  margin-bottom: 45px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__author-name {
+    font-size: 17px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: (24/17);
+  }
+
+  &__author-profile {
+    font-size: 17px;
+    line-height: (30/17);
+  }
+}

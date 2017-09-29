@@ -1,0 +1,18 @@
+.contacts {
+  margin-bottom: 10px;
+
+  &__icon-flag {
+    display: none;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: (30/18);
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  &__map {
+    margin-bottom: 40px;
+  }
+}

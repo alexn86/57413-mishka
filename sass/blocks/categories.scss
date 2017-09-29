@@ -1,0 +1,42 @@
+.categories {
+  margin-bottom: 30px;
+
+  &__item {
+
+  }
+
+  &__item:nth-child(2n+1) {
+    background-color: #63d1bb;
+  }
+
+  &__item:nth-child(2n+2) {
+    background-color: #56c3b2;
+  }
+
+  &__link {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: (24/19);
+    height: 103px;
+    //display: block;
+  }
+
+  &__link:hover {
+    height: 108px;
+  }
+
+  &__name {
+
+  }
+
+  &__icon {
+    flex-basis: 60px;
+    text-align: center;
+  }
+}
