@@ -27,6 +27,10 @@
     height: 108px;
   }
 
+  &__link:hover span {
+    padding-bottom: 5px;
+  }
+
   &__icon {
     flex-basis: 60px;
     text-align: center;
