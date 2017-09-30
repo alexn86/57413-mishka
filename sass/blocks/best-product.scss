@@ -1,0 +1,22 @@
+.best-product {
+  margin-bottom: 30px;
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__caption {
+    font-size: 17px;
+    line-height: (20/17);
+    color: #63d1bb;
+    font-weight: bold;
+  }
+
+  &__price {
+    font-size: 17px;
+    line-height: (24/17);
+    font-weight: bold;
+    text-align: center;
+    padding: 25px 0;
+  }
+}

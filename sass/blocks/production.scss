@@ -1,0 +1,22 @@
+.production {
+  margin-bottom: 30px;
+
+  &__wrapper {
+    border: 1px solid #ededed;
+  }
+
+  &__title {
+    font-size: 17px;
+    line-height: (24/17);
+  }
+
+  &__info {
+    padding: 30px;
+  }
+
+  &__desc {
+    font-size: 13px;
+    line-height: (24/13);
+    margin-bottom: 30px;
+  }
+}

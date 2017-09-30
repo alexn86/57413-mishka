@@ -1,0 +1,38 @@
+.product {
+  border: 1px solid #ededed;
+
+  &__pic-link {
+    display: block;
+  }
+
+  &__title {
+    font-size: 17px;
+    line-height: (24/17);
+  }
+
+  &__title-link {
+    color: $secondary;
+    text-decoration: none;
+  }
+
+  &__info {
+    padding: 30px;
+  }
+
+  &__desc {
+    font-size: 13px;
+    line-height: (30/13);
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 15px;
+    line-height: (24/15);
+    font-weight: bold;
+  }
+}

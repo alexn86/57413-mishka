@@ -1,0 +1,20 @@
+.features {
+  margin-bottom: 30px;
+
+  &__item {
+    padding-bottom: 25px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__item-title {
+    font-size: 17px;
+    line-height: (20/17);
+  }
+
+  &__pic {
+    padding-bottom: 15px;
+  }
+}
