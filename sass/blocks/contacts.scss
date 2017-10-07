@@ -1,18 +1,197 @@
 .contacts {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 55px;
+  }
+
+  @include desktop {
+    margin-bottom: 100px;
+  }
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include desktop {
+      position: relative;
+      width: 50%;
+      min-height: 455px;
+      padding-right: 30px;
+      flex-direction: column;
+      padding-left: 175px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 30px;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include desktop {
+      padding-top: 80px;
+      position: relative;
+      justify-content: flex-start;
+      margin-bottom: 50px;
+    }
+  }
 
   &__icon-flag {
     display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include desktop {
+      position: absolute;
+      left: -110px;
+      top: 60px;
+    }
   }
 
   &__title {
     font-size: 18px;
     line-height: (30/18);
     font-weight: bold;
-    margin-bottom: 30px;
+
+    @include tablet {
+      font-size: 43px;
+      line-height: (50/43);
+    }
+
+    @include desktop {
+      order: 1;
+      font-size: 53px;
+      line-height: (57/53);
+    }
+  }
+
+  &__details {
+    width: 100%;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__details tbody {
+
+    @include tablet {
+      display: flex;
+    }
+
+    @include desktop {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    @include tablet {
+      width: 50%;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  &__type,
+  &__value {
+    vertical-align: top;
+    text-align: left;
+    padding-bottom: 30px;
+
+    @include tablet {
+      padding-bottom: 0;
+      font-size: 17px;
+      line-height: (30/17);
+    }
+
+    @include desktop {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__value {
+    padding-left: 10px;
+
+    @include tablet {
+      padding-left: 30px;
+    }
+  }
+
+  &__type {
+    width: auto;
+  }
+
+  &__email {
+    color: $primary;
+    border-bottom: 1px solid #62d1ba;
+    text-decoration: none;
+    padding-bottom: 5px;
+  }
+
+  &__email:hover {
+    color: #46c1ae;
+    border-bottom: 1px solid #46c1ae;
+  }
+
+  &__email:active {
+    color: rgba(#46c1ae, 0.3);
+    border-bottom: 1px solid rgba(#46c1ae, 0.3);
   }
 
   &__map {
     margin-bottom: 40px;
+    position: relative;
+    left: -30px;
+    margin-right: -60px;
+
+    @include tablet {
+      left: -50px;
+      margin-right: -100px;
+      margin-bottom: 55px;
+    }
+
+    @include desktop {
+      margin-right: 0;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 100%;
+    }
+  }
+
+  &__map img {
+    height: 100vh;
+    width: 100%;
+
+    @include tablet {
+      height: 455px;
+    }
+  }
+
+  &__write-button {
+    @include tablet {
+      display: inline-block;
+      padding: 0 40px;
+      align-self: center;
+    }
+
+    @include desktop {
+      align-self: flex-start;
+      margin-top: auto;
+    }
   }
 }

@@ -1,22 +1,109 @@
 .production {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
+
+  @include desktop {
+    margin-bottom: 100px;
+  }
 
   &__wrapper {
     border: 1px solid #ededed;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      position: relative;
+      height: 455px;
+      padding-left: 685px;
+    }
+  }
+
+  &__header {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      padding: 40px 40px 0;
+    }
+
+    @include desktop {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px 60px 0 80px;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+
+    @include desktop {
+      margin-bottom: 25px;
+    }
   }
 
   &__title {
     font-size: 17px;
     line-height: (24/17);
+    padding-left: 25px;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: (24/20);
+    }
+
+    @include desktop {
+      padding-left: 0;
+    }
+  }
+
+  &__title br {
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      display: inline;
+    }
+  }
+
+  &__video {
+    @include tablet {
+      order: -1;
+    }
+
+    @include desktop {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 685px;
+      height: 100%;
+    }
+  }
+
+  &__video img {
+    width: 100%;
+    height: 100%;
   }
 
   &__info {
     padding: 30px;
+
+    @include tablet {
+      padding: 40px;
+    }
+
+    @include desktop {
+      padding: 40px 60px 40px 80px;
+    }
   }
 
   &__desc {
     font-size: 13px;
     line-height: (24/13);
     margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
   }
 }

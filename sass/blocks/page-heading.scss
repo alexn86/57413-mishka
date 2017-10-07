@@ -6,11 +6,26 @@
   display: flex;
   margin-bottom: 30px;
 
+  @include tablet {
+    height: 225px;
+    margin-bottom: 80px;
+  }
+
+  @include desktop {
+    height: 255px;
+    //width: $desktop-width;
+    margin: 0 auto 130px;
+  }
+
   &_index {
-    background: url("./../img/hero-mobile@1x.jpg") no-repeat 50% 0%;
-    //background-size: cover;
+    background: url("./../img/hero-mobile@1x.jpg") no-repeat 50% 0;
+    background-size: cover;
     height: 283px;
     margin-bottom: 0;
+
+    @include tablet {
+      height: 745px;
+    }
   }
 
   &__title {
@@ -18,5 +33,24 @@
     padding: 0 30px;
     text-align: center;
     font-size: 27px;
+
+    @include tablet {
+      font-size: 43px;
+      line-height: (50/43);
+      padding: 0 50px;
+      //padding-top: 40px;
+    }
+
+    @include desktop {
+      font-size: 53px;
+      line-height: (57/53);
+      padding: 0 175px;
+      width: $desktop-width;
+    }
+  }
+
+  &_index &__title {
+    margin-top: 160px;
+    padding-top: 0;
   }
 }

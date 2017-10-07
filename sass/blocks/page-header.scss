@@ -1,8 +1,33 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include tablet {
+    flex-direction: row;
+    padding: 0 50px;
+  }
+
+  @include desktop {
+    width: $desktop-width;
+    margin: 0 auto;
+  }
+
   &__logo {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80px;
+
+    @include tablet {
+      position: absolute;
+      z-index: 10;
+    }
+
+    @include desktop {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }

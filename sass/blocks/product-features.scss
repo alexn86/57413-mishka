@@ -1,0 +1,15 @@
+.product-features {
+  width: 100%;
+
+  &__property,
+  &__value {
+    padding: 10px 0;
+    border-bottom: 1px solid #ececec;
+    text-align: left;
+  }
+
+  &__property {
+    padding-right: 30px;
+    width: 1px;
+  }
+}
