@@ -50,7 +50,9 @@
   }
 
   &_index &__title {
-    margin-top: 160px;
-    padding-top: 0;
+    @include tablet {
+      margin-top: 160px;
+      padding-top: 0;
+    }
   }
 }
