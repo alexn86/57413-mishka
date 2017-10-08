@@ -33,6 +33,7 @@ h6 {
 img {
   max-width: 100%;
   vertical-align: middle;
+  height: auto;
 }
 
 ul li {
@@ -42,4 +43,14 @@ ul li {
 .section-title {
   font-size: 25px;
   line-height: (30/25);
+
+  @include tablet {
+    font-size: 43px;
+    line-height: (50/30);
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: (57/53);
+  }
 }

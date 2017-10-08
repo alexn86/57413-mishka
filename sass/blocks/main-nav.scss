@@ -1,4 +1,23 @@
 .main-nav {
+  @include tablet {
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      //flex-wrap: wrap;
+      position: relative;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
   &__toggle {
     background: none;
     border: none;
@@ -6,5 +25,9 @@
     position: absolute;
     top: 30px;
     right: 30px;
+
+    @include tablet {
+      display: none;
+    }
   }
 }

@@ -1,20 +1,53 @@
 .features {
   margin-bottom: 30px;
 
+  &__list {
+    @include tablet {
+      display: flex;
+      //flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+
   &__item {
     padding-bottom: 25px;
+
+    @include tablet {
+      width: 50%;
+      padding-bottom: 50px;
+      padding-right: 10px;
+    }
   }
 
   &__title {
     margin-bottom: 25px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
   }
 
   &__item-title {
     font-size: 17px;
     line-height: (20/17);
+
+    @include tablet {
+      font-size: 20px;
+      line-height: (22/20);
+    }
   }
+
+  &__item-title br {
+    display: none;
+
+    @include tablet {
+      display: inline;
+    }
+  }
+
 
   &__pic {
     padding-bottom: 15px;
+    height: 40px;
   }
 }

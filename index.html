@@ -13,7 +13,7 @@
         <img class="page-header__logo-pic" src="./img/logo-mobile.svg" alt="HTML Academy: Мишка">
       </a>
     </div>
-    <nav class="main-nav">
+    <nav class="page-header__nav main-nav">
       <button class="main-nav__toggle" type="button">
         <img src="./img/icon-menu-open.svg">
       </button>
@@ -26,8 +26,16 @@
             <a class="menu-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
+        <ul class="main-nav__list menu-list menu-list_desktop">
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Новые поступления</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Распродажа</a>
+          </li>
+        </ul>
         <ul class="main-nav__list user-list">
-          <li class="user-list__item">
+          <li class="user-list__item user-list__item_search">
             <a class="user-list__link" href="#">
               <span class="user-list__icon">
                 <img class="user-list__icon-pic" src="./img/icon-search.svg">
@@ -35,13 +43,16 @@
               Поиск по сайту
             </a>
           </li>
-          <li class="user-list__item">
+          <li class="user-list__item user-list__item_cart">
             <a class="user-list__link" href="#">
               <span class="user-list__icon">
                 <img class="user-list__icon-pic" src="./img/icon-cart.svg">
               </span>
               Корзина: пока пуста
             </a>
+          </li>
+          <li class="user-list__item user-list__item_delivery">
+            Бесплатная доставка по России
           </li>
         </ul>
       </div>
@@ -79,12 +90,12 @@
       </ul>
     </section>
 
-    <section class="best-product">
-      <div class="best-product__wrapper container">
-        <header class="best-product__header">
-          <h2 class="best-product__title section-title">Вязанные корзинки</h2>
-          <span class="best-product__caption">Товар недели</span>
-        </header>
+    <section class="best-product container">
+      <header class="best-product__header">
+        <h2 class="best-product__title section-title">Вязанные корзинки</h2>
+        <span class="best-product__caption">Товар<br> недели</span>
+      </header>
+      <div class="best-product__wrapper">
         <div class="best-product__desc">
           Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
         </div>
@@ -108,66 +119,74 @@
       </div>
     </section>
 
-    <section class="features">
-      <div class="features__wrapper container">
+    <section class="features container">
+      <div class="features__wrapper">
         <h2 class="features__title section-title">Коротко о нас:</h2>
         <ul class="features__list">
           <li class="features__item">
             <img class="features__pic" src="./img/icon-feature-flower.svg">
-            <h3 class="features__item-title">Экологически чистые материалы</h3>
+            <h3 class="features__item-title">Экологически<br> чистые материалы</h3>
           </li>
           <li class="features__item">
             <img class="features__pic" src="./img/icon-feature-money.svg">
-            <h3 class="features__item-title">Скандинавский стиль по российской цене</h3>
+            <h3 class="features__item-title">Скандинавский стиль<br> по российской цене</h3>
           </li>
           <li class="features__item">
             <img class="features__pic" src="./img/icon-feature-heart.svg">
-            <h3 class="features__item-title">Увеличивает лайки на фотографиях</h3>
+            <h3 class="features__item-title">Увеличивает лайки<br> на фотографиях</h3>
           </li>
           <li class="features__item">
             <img class="features__pic" src="./img/icon-feature-ball.svg">
-            <h3 class="features__item-title">Связано вручную с любовью и умилением</h3>
+            <h3 class="features__item-title">Связано вручную с<br> любовью и умилением</h3>
           </li>
           <li class="features__item">
             <img class="features__pic" src="./img/icon-feature-rocket.svg">
-            <h3 class="features__item-title">Поддержка отечественного производителя</h3>
+            <h3 class="features__item-title">Поддержка отечественного<br> производителя</h3>
           </li>
           <li class="features__item">
             <img class="features__pic" src="./img/icon-feature-gift.svg">
-            <h3 class="features__item-title">Поставляется в подарочной упаковке</h3>
+            <h3 class="features__item-title">Поставляется в<br> подарочной упаковке</h3>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="reviews">
-      <div class="reviews__wrapper container">
+    <section class="reviews container">
+      <div class="reviews__wrapper">
         <h2 class="reviews__title section-title">Отзывы</h2>
         <div class="reviews__list">
           <blockquote class="reviews__item">
             <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            <cite class="reviews__author-name">Анастасия Красильникова</cite>
-            <p class="reviews__author-profile">@misssssiskras</p>
+            <div class="reviews__author">
+              <cite class="reviews__author-name">Анастасия Красильникова</cite>
+              <p class="reviews__author-profile">@misssssiskras</p>
+            </div>
           </blockquote>
-        </div>
-        <div class="reviews__toggles">
-          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__next" type="button">Следующий отзыв</button>
+          <div class="reviews__toggles">
+            <a class="reviews__prev">
+              <img src="./img/icon-left-arrow.svg">
+            </a>
+            <a class="reviews__next">
+              <img src="./img/icon-right-arrow.svg">
+            </a>
+          </div>
         </div>
         <a class="reviews__write-button button" href="#">Написать</a>
       </div>
     </section>
 
-    <section class="contacts">
-      <div class="contacts__wrapper container">
+    <section class="contacts container">
+      <div class="contacts__wrapper">
         <header class="contacts__header">
-          <img class="contacts__icon-flag" src="./img/icon-flag.svg">
           <h2 class="contacts__title">Контакты</h2>
+          <img class="contacts__icon-flag" src="./img/icon-flag.svg">
         </header>
         <table class="contacts__details">
           <tr class="contacts__item">
             <td class="contacts__type">e-mail:</td>
-            <td class="contacts__value">info@mimimishkashop.ru</td>
+            <td class="contacts__value">
+              <a href="mailto:info@mimimishkashop.ru" class="contacts__email">info@mimimishkashop.ru</a>
+            </td>
           </tr>
           <tr class="contacts__item">
             <td class="contacts__type">адрес:</td>
@@ -189,7 +208,7 @@
     <div class="page-footer__wrapper container">
       <div class="page-footer__logo">
         <a class="page-footer__logo-link" href="#">
-          <img class="page-footer__logo-pic" src="http://placehold.it/100x35" alt="Мишка">
+          <img class="page-footer__logo-pic" src="./img/logo-mobile.svg" alt="Мишка">
         </a>
       </div>
       <div class="page-footer__socials socials">
@@ -214,7 +233,7 @@
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__logo-pic" src="./img/logo-htmlacademy.svg" alt="HTML Academy">
+          <img class="copyright__logo-pic" src="./img/logo-htmlacademy.svg" alt="HTML Academy" width="27px" height="34px">
         </a>
       </div>
     </div>

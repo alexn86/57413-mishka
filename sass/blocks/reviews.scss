@@ -1,12 +1,64 @@
 .reviews {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
+
+  @include tablet {
+    min-height: 457px;
+    background: url("./../img/review@1x.jpg") 0 0 no-repeat;
+    background-size: contain;
+    margin-bottom: 60px;
+  }
+
+  @include desktop {
+    background-origin: content-box;
+  }
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: flex-start;
+      padding-top: 80px;
+      align-items: center;
+    }
+
+    @include desktop {
+      padding-left: 175px;
+    }
+  }
 
   &__title {
     margin-bottom: 30px;
+
+    @include tablet {
+      order: 1;
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    @include tablet {
+      order: 3;
+      flex-grow: 1;
+      position: relative;
+      padding-top: 50px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
   }
 
   &__text {
     margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 60px;
+    }
   }
 
   &__author-name {
@@ -19,5 +71,47 @@
   &__author-profile {
     font-size: 17px;
     line-height: (30/17);
+  }
+
+  &__toggles {
+    margin-bottom: 35px;
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+
+    @include tablet {
+      width: auto;
+      position: absolute;
+      bottom: 15px;
+      right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__prev,
+  &__next {
+    background: none;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #ececec;
+    display: table-cell;
+    border-collapse: collapse;
+    text-align: center;
+    height: 50px;
+    vertical-align: middle;
+
+    @include tablet {
+      border: none;
+      height: auto;
+      padding: 0 20px;
+    }
+  }
+
+  &__write-button {
+    @include tablet {
+      order: 2;
+      display: inline-block;
+      padding: 0 40px;
+    }
   }
 }

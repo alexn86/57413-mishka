@@ -1,10 +1,45 @@
 .user-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include tablet {
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-left: 320px;
+  }
+
+  @include desktop {
+    padding-left: 0;
+  }
+
   &__item {
     padding: 0 30px;
+    border-top: 1px solid #ececec;
+    flex-shrink: 0;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    &_delivery {
+      display: none;
+
+      @include tablet {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 115px;
+        z-index: 10;
+        border: none;
+      }
+    }
   }
 
   &__link {
     min-height: 80px;
+    height: 80px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -13,7 +48,14 @@
     font-weight: bold;
     text-decoration: none;
     color: $secondary;
-    border-top: 1px solid #ececec;
+
+    @include tablet {
+      min-height: 90px;
+      height: 90px;
+      border-top: none;
+      border-left: 1px solid #ececec;
+      padding-left: 30px;
+    }
   }
 
   &__link:hover {
@@ -31,5 +73,18 @@
   &__icon-pic {
     width: 20px;
     height: 20px;
+  }
+
+  &__item_search &__link {
+    @include tablet {
+      font-size: 0;
+      padding-right: 30px;
+    }
+  }
+
+  &__item_search &__icon {
+    @include tablet {
+      padding-right: 0;
+    }
   }
 }
