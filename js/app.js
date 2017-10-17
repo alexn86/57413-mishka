@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var orderButton = document.querySelector('.best-product__order-button');
     var modal = document.querySelector('.modal');
     var modalWrapper = document.querySelector('.modal__wrapper');
+    var addCartButtons = document.querySelectorAll('.product__add-cart-button');
 
     navMain.classList.remove('main-nav_no-js');
 
@@ -15,7 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    function showModal() {
+    function showModal(e) {
+        e.preventDefault();
+
         if (modal.classList.contains('modal_opened')) {
             modal.classList.remove('modal_opened');
         } else {
@@ -23,7 +26,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    orderButton.addEventListener('click', showModal);
+    if (orderButton) {
+        orderButton.addEventListener('click', showModal);
+    }
+    if (addCartButtons.length) {
+        for (var i = 0; i < addCartButtons.length; i++) {
+            addCartButtons[i].addEventListener('click', showModal);
+        }
+    }
 
     modal.addEventListener('click', function (e) {
         if (modal.classList.contains('modal_opened')) {
