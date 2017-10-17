@@ -35,11 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    modal.addEventListener('click', function (e) {
-        if (modal.classList.contains('modal_opened')) {
-            if (!modalWrapper.contains(e.target)) {
-                modal.classList.remove('modal_opened');
+
+    if (modal) {
+        modal.addEventListener('click', function (e) {
+            if (modal.classList.contains('modal_opened')) {
+                if (!modalWrapper.contains(e.target)) {
+                    modal.classList.remove('modal_opened');
+                }
             }
-        }
-    })
+        })
+    }
 });
