@@ -7,15 +7,17 @@
     //order: 2;
     position: absolute;
     z-index: 10;
-    top: 115px;
-    width: 320px;
+    top: 105px;
+    max-width: 65%;
     flex-wrap: wrap;
   }
 
   @include desktop {
     position: relative;
     top: 0;
-    width: auto;
+    max-width: 40%;
+    flex-wrap: nowrap;
+    overflow: hidden;
   }
 
   &_desktop {
@@ -24,7 +26,7 @@
     @include desktop {
       display: flex;
       position: absolute;
-      top: 115px;
+      top: 105px;
       left: 0;
     }
   }
@@ -45,13 +47,19 @@
 
     @include tablet {
       padding: 0;
-      min-width: 160px;
+      min-width: 170px;
       border: none;
     }
 
     @include desktop {
       min-width: 185px;
     }
+
+    //&:nth-of-type(n+3) {
+    //  @include desktop {
+    //    display: none;
+    //  }
+    //}
   }
 
   &__link {
@@ -74,7 +82,7 @@
       padding-left: 0;
       min-height: auto;
       height: auto;
-      padding-right: 10px;
+      //padding-right: 10px;
     }
 
     @include desktop {

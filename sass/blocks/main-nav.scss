@@ -3,14 +3,46 @@
     width: 100%;
   }
 
+  @include mobile {
+    &__wrapper {
+      display: none;
+    }
+
+    &_opened &__wrapper {
+      display: block;
+      position: absolute;
+      z-index: 20;
+      top: 80px;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid #ececec;
+      background-color: #ffffff;
+    }
+
+    &_no-js &__toggle {
+      display: none;
+    }
+
+    &_no-js &__wrapper {
+      display: block;
+      position: static;
+      border-bottom: none;
+    }
+  }
+
   &__wrapper {
-    display: flex;
-    flex-direction: column;
+    //display: flex;
+    //flex-direction: column;
 
     @include tablet {
+      display: flex;
       flex-direction: row;
       //flex-wrap: wrap;
       position: relative;
+    }
+
+    @include desktop {
+      justify-content: space-between;
     }
   }
 
@@ -25,9 +57,62 @@
     position: absolute;
     top: 30px;
     right: 30px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+    outline: none;
 
     @include tablet {
       display: none;
     }
+  }
+
+  &__toggle-icon,
+  &__toggle-icon::before,
+  &__toggle-icon::after {
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    display: block;
+  }
+
+  &__toggle-icon {
+    transition-duration: 0s;
+    transition-delay: 0.1s;
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      transition-property: margin, transform;
+      transition-duration: 0.2s;
+      transition-delay: 0.2s, 0s;
+    }
+
+    &::before {
+      margin-top: -6px;
+    }
+
+    &::after {
+      margin-top: 6px;
+    }
+  }
+
+  &_opened &__toggle-icon {
+    background-color: transparent;
+  }
+
+  &_opened &__toggle-icon::before {
+    margin-top: 0;
+    transform: rotate(45deg);
+    transition-delay: 0s, 0.2s;
+  }
+
+  &_opened &__toggle-icon::after {
+    margin-top: 0;
+    transform: rotate(-45deg);
+    transition-delay: 0s, 0.2s;
   }
 }

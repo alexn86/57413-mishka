@@ -1,18 +1,18 @@
 .categories {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   @include tablet {
     padding: 0 50px;
     //margin-top: -120px;
     z-index: 10;
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   @include desktop {
     //padding: 0 100px;
     width: $desktop-width;
-    margin: 0 auto 70px;
+    margin: 0 auto 65px;
   }
 
   &__list {
@@ -20,6 +20,7 @@
     flex-direction: column;
 
     @include tablet {
+      //display: flex;
       flex-direction: row;
       margin-top: -120px;
       height: 125px;
@@ -29,6 +30,7 @@
   &__item {
     flex-grow: 1;
     height: 103px;
+    z-index: 10;
 
     @include tablet {
       height: 120px;
@@ -56,16 +58,20 @@
     //height: 103px;
     //display: block;
     height: 100%;
+    overflow: hidden;
 
     @include tablet {
       font-size: 20px;
       line-height: (30/20);
+      height: 115px;
       //height: 120px;
+      padding: 0 35px;
     }
   }
 
   &__item:hover {
     height: 108px;
+    margin-top: -5px;
 
     @include tablet {
       height: 125px;
@@ -80,8 +86,34 @@
     color: rgba(#ffffff, 0.3);
   }
 
+  &__link:hover &__icon path {
+    fill: rgba(#149080, 0.7);
+  }
+
+  &__link:active &__icon path {
+    fill: rgba(#149080, 0.3);
+  }
+
   &__icon {
     flex-basis: 60px;
     text-align: center;
+    flex-shrink: 0;
+    font-size: 0;
+
+    path {
+      fill: rgba(#149080, 0.5);
+    }
+  }
+
+  &__icon-pic {
+    &_interior {
+      width: 40px;
+      height: 62px;
+    }
+
+    &_toy {
+      width: 60px;
+      height: 60px;
+    }
   }
 }

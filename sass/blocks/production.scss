@@ -1,14 +1,26 @@
 .production {
   margin-bottom: 60px;
 
+  @include tablet {
+    margin-bottom: 65px;
+  }
+
   @include desktop {
-    margin-bottom: 100px;
+    margin-bottom: 110px;
   }
 
   &__wrapper {
     border: 1px solid #ededed;
     display: flex;
     flex-direction: column;
+
+    &:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0 , 0, 0.1);
+    }
 
     @include desktop {
       position: relative;
@@ -18,18 +30,18 @@
   }
 
   &__header {
-    padding: 30px;
+    padding: 23px 32px;
     display: flex;
     align-items: center;
 
     @include tablet {
-      padding: 40px 40px 0;
+      padding: 35px 40px 0;
     }
 
     @include desktop {
       flex-direction: column;
       align-items: flex-start;
-      padding: 40px 60px 0 80px;
+      padding: 40px 60px 0 75px;
     }
   }
 
@@ -49,6 +61,7 @@
     @include tablet {
       font-size: 20px;
       line-height: (24/20);
+      padding-left: 30px;
     }
 
     @include desktop {
@@ -67,8 +80,14 @@
   }
 
   &__video {
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    position: relative;
+
     @include tablet {
       order: -1;
+      height: 455px;
     }
 
     @include desktop {
@@ -85,15 +104,32 @@
     height: 100%;
   }
 
+  &__play-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    &:active {
+      transform: translate(-50%, -50%) scale(0.8);
+      opacity: 0.3;
+    }
+  }
+
   &__info {
-    padding: 30px;
+    padding: 30px 35px;
 
     @include tablet {
-      padding: 40px;
+      padding: 25px 40px 45px;
     }
 
     @include desktop {
-      padding: 40px 60px 40px 80px;
+      padding: 35px 60px 40px 75px;
     }
   }
 
@@ -103,7 +139,13 @@
     margin-bottom: 30px;
 
     @include tablet {
-      margin-bottom: 40px;
+      margin-bottom: 35px;
+      font-size: 15px;
+      line-height: (30/15);
+    }
+
+    @include desktop {
+      margin-bottom: 45px;
     }
   }
 }

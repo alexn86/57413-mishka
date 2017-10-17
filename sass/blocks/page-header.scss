@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  //height: 80px;
 
   @include tablet {
     flex-direction: row;
     padding: 0 50px;
+    //height: 90px;
   }
 
   @include desktop {
@@ -22,6 +24,7 @@
     @include tablet {
       position: absolute;
       z-index: 10;
+      height: 90px;
     }
 
     @include desktop {
@@ -29,5 +32,10 @@
       top: 50%;
       transform: translate(-50%, -50%);
     }
+  }
+
+  &__logo-pic {
+    width: 85px;
+    height: 35px;
   }
 }

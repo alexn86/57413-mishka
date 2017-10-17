@@ -6,19 +6,22 @@
   }
 
   @include desktop {
-    margin-bottom: 100px;
+    margin-bottom: 105px;
   }
 
   &__wrapper {
+    padding-top: 8px;
+
     @include tablet {
       display: flex;
       flex-direction: column;
+      padding-top: 0;
     }
 
     @include desktop {
       position: relative;
       width: 50%;
-      min-height: 455px;
+      min-height: 470px;
       padding-right: 30px;
       flex-direction: column;
       padding-left: 175px;
@@ -26,7 +29,8 @@
   }
 
   &__header {
-    margin-bottom: 30px;
+    //padding-top: 10px;
+    margin-bottom: 25px;
 
     @include tablet {
       display: flex;
@@ -35,10 +39,10 @@
     }
 
     @include desktop {
-      padding-top: 80px;
+      padding-top: 85px;
       position: relative;
       justify-content: flex-start;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
     }
   }
 
@@ -52,7 +56,7 @@
     @include desktop {
       position: absolute;
       left: -110px;
-      top: 60px;
+      top: 75px;
     }
   }
 
@@ -110,6 +114,7 @@
     vertical-align: top;
     text-align: left;
     padding-bottom: 30px;
+    line-height: (30/15);
 
     @include tablet {
       padding-bottom: 0;
@@ -118,15 +123,18 @@
     }
 
     @include desktop {
-      padding-bottom: 30px;
+      padding-bottom: 25px;
     }
   }
 
   &__value {
-    padding-left: 10px;
+    padding-left: 30px;
 
+    //@include tablet {
+    //  padding-left: 30px;
+    //}
     @include tablet {
-      padding-left: 30px;
+      padding-left: 20px;
     }
   }
 
@@ -166,7 +174,7 @@
     @include desktop {
       margin-right: 0;
       position: absolute;
-      top: 0;
+      top: 10px;
       left: 100%;
       width: 100%;
     }
@@ -177,7 +185,7 @@
     width: 100%;
 
     @include tablet {
-      height: 455px;
+      height: 460px;
     }
   }
 

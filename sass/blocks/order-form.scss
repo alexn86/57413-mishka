@@ -2,17 +2,33 @@
   &__header {
     font-size: 13px;
     line-height: (24/13);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    margin-top: -7px;
 
     @include tablet {
       font-size: 17px;
       line-height: (30/17);
-      margin-bottom: 50px;
+      margin-bottom: 7px;
+    }
+
+    @include desktop {
+      padding: 0 225px;
     }
   }
 
   &__fieldset {
-    margin-bottom: 25px;
+    margin-bottom: 31px;
+
+    @include tablet {
+      //margin-bottom: 26px;
+      margin-bottom: 0;
+      padding-top: 50px;
+      padding-bottom: 26px;
+    }
+
+    @include desktop {
+      padding-right: 225px;
+    }
   }
 
   &__fieldset:nth-of-type(2n+2) {
@@ -40,8 +56,13 @@
     @include tablet {
       width: 25%;
       margin-bottom: 0;
-      padding-top: 10px;
+      padding-top: 17px;
       flex-shrink: 0;
+    }
+
+    @include desktop {
+      width: 175px;
+      padding-left: 60px;
     }
   }
 
@@ -73,7 +94,238 @@
   }
 
   &__field {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+    position: relative;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+
+    &_text {
+      //margin-bottom: 20px;
+
+      label {
+        padding-top: 4px;
+
+        @include tablet {
+          padding-top: 15px;
+        }
+      }
+
+      @include tablet {
+        display: flex;
+      }
+    }
+
+    &_tel {
+      margin-top: -6px;
+      margin-bottom: 31px;
+
+      @include tablet {
+        margin-bottom: 24px;
+      }
+    }
+
+    &_email {
+      margin-top: -5px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"] ~ label {
+      //display: block;
+      padding-left: 63px;
+      min-height: 40px;
+      padding-top: 10px;
+
+      @include tablet {
+        min-height: 52px;
+        padding-left: 81px;
+        padding-top: 15px;
+      }
+    }
+
+    input[type="radio"] ~ label::before,
+    input[type="radio"] ~ label::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    input[type="radio"] ~ label::before {
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      border: 2px solid #444444;
+
+      @include tablet {
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    input[type="radio"] ~ label::after {
+      top: 12px;
+      left: 12px;
+      z-index: 2;
+      width: 16px;
+      height: 16px;
+      background-color: #63d1bb;
+      display: none;
+
+      @include tablet {
+        width: 22px;
+        height: 22px;
+        top: 15px;
+        left: 15px;
+      }
+    }
+
+    input[type="radio"]:checked ~ label::after {
+      display: block;
+    }
+
+    input[type="radio"] ~ label:hover::before {
+      border-color: #63d1bb;
+    }
+
+    input[type="radio"] ~ label:active::before {
+      border-color: rgba(#444444, 0.3);
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"] ~ label {
+      //display: block;
+      padding-left: 63px;
+      min-height: 39px;
+      padding-top: 11px;
+      margin-bottom: 22px;
+
+      @include tablet {
+        min-height: 52px;
+        margin-bottom: 0;
+        padding-left: 81px;
+        padding-top: 15px;
+      }
+    }
+
+    input[type="checkbox"] ~ label::before,
+    input[type="checkbox"] ~ label::after {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] ~ label::before {
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 39px;
+      height: 39px;
+      background-color: transparent;
+      border: 2px solid #444444;
+
+      @include tablet {
+        width: 54px;
+        height: 52px;
+      }
+    }
+
+    input[type="checkbox"] ~ label::after {
+      width: 22px;
+      height: 16px;
+      z-index: 2;
+      background: url('./../img/icon-tick.svg') no-repeat;
+      background-size: cover;
+      left: 9px;
+      top: 13px;
+      display: none;
+
+      @include tablet {
+        width: 33px;
+        height: 23px;
+        top: 16px;
+        left: 12px;
+      }
+    }
+
+    input[type="checkbox"]:checked ~ label::after {
+      display: block;
+    }
+
+    input[type="checkbox"] ~ label:hover::before {
+      border-color: #63d1bb;
+    }
+
+    input[type="checkbox"] ~ label:active::before {
+      border-color: rgba(#444444, 0.3);
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      border: none;
+      outline: none;
+      border-bottom: 2px solid $secondary;
+      color: #444444;
+      background-color: transparent;
+    }
+
+    input[type="text"]:hover,
+    input[type="text"]:focus,
+    input[type="tel"]:hover,
+    input[type="tel"]:focus,
+    input[type="email"]:hover,
+    input[type="email"]:focus,
+    textarea:hover,
+    textarea:focus {
+      border-color: #63d1bb;
+    }
+
+    input[type="tel"]:hover ~ &-icon path,
+    input[type="tel"]:focus ~ &-icon path,
+    input[type="email"]:hover ~ &-icon path,
+    input[type="email"]:focus ~ &-icon path {
+      fill: #63d1bb;
+    }
+
+    input[type="text"] {
+      padding: 15px 0;
+      margin-bottom: 0;
+
+      @include tablet {
+        padding: 11px 18px 13px 18px;
+      }
+    }
+
+    input[type="tel"],
+    input[type="email"] {
+      padding: 0 40px 15px 0;
+
+      @include tablet {
+        padding: 17px 60px 12px 16px;
+      }
+    }
+
+    textarea {
+      height: 142px;
+      border: 2px solid #444444;
+      color: #444444;
+      resize: none;
+      padding: 15px;
+      outline: none;
+    }
   }
 
   &__field_color {
@@ -83,6 +335,7 @@
 
     @include desktop {
       width: 33.3%;
+      //width: 262px;
     }
   }
 
@@ -90,6 +343,14 @@
     font-size: 17px;
     line-height: (18/17);
     font-weight: bold;
+    display: block;
+    color: $secondary;
+
+    @include tablet {
+      font-size: 19px;
+      line-height: (18/19);
+      padding-right: 25px;
+    }
   }
 
   &__field input[type="text"],
@@ -99,14 +360,58 @@
     font-size: 17px;
     line-height: (18/17);
     font-family: "OpenSans";
-    color: #d2d2d2;
+    width: 100%;
+
+    @include tablet {
+      font-size: 19px;
+      line-height: (18/19);
+    }
+  }
+
+  &__field input[type="text"]::placeholder,
+  &__field input[type="tel"]::placeholder,
+  &__field input[type="email"]::placeholder,
+  &__field textarea::placeholder{
+    color: rgba($secondary, 0.3);
+  }
+
+  &__field-icon {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    text-align: center;
+
+    path {
+      fill: rgba($secondary, 0.2);
+    }
+
+    @include tablet {
+      right: 16px;
+      width: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include desktop {
+      right: 0;
+    }
   }
 
   &__footer {
+    margin-top: -20px;
+
     @include tablet {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-top: -6px;
+    }
+
+    @include desktop {
+      padding: 0 225px;
     }
   }
 
@@ -130,7 +435,7 @@
 
     @include tablet {
       width: auto;
-      padding: 0 40px;
+      padding: 0 30px;
     }
   }
 }
