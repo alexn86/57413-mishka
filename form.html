@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка | Форма заказа</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/app.js"></script>
@@ -81,11 +81,11 @@
           <div class="order-form__fieldset-title">Тип</div>
           <div class="order-form__fieldset-group">
             <div class="order-form__field">
-              <input type="radio" name="type" value="accessory" id="type1" checked>
+              <input class="visually-hidden" type="radio" name="type" value="accessory" id="type1" checked>
               <label for="type1">Аксессуар для интерьера</label>
             </div>
             <div class="order-form__field">
-              <input type="radio" name="type" value="toy" id="type2">
+              <input class="visually-hidden" type="radio" name="type" value="toy" id="type2">
               <label for="type2">Детская игрушка</label>
             </div>
           </div>
@@ -97,27 +97,27 @@
           <div class="order-form__fieldset-title">Цвет</div>
           <div class="order-form__fieldset-group order-form__fieldset-group_color">
             <div class="order-form__field order-form__field_color">
-              <input type="checkbox" name="color[]" value="white" id="color1" checked>
+              <input class="visually-hidden" type="checkbox" name="color[]" value="white" id="color1" checked>
               <label for="color1">Белый</label>
             </div>
             <div class="order-form__field order-form__field_color">
-              <input type="checkbox" name="color[]" value="gray" id="color2" checked>
+              <input class="visually-hidden" type="checkbox" name="color[]" value="gray" id="color2" checked>
               <label for="color2">Серый</label>
             </div>
             <div class="order-form__field order-form__field_color">
-              <input type="checkbox" name="color[]" value="tiffani" id="color3">
+              <input class="visually-hidden" type="checkbox" name="color[]" value="tiffani" id="color3">
               <label for="color3">&laquo;Тиффани&raquo;</label>
             </div>
             <div class="order-form__field order-form__field_color">
-              <input type="checkbox" name="color[]" value="black" id="color4">
+              <input class="visually-hidden" type="checkbox" name="color[]" value="black" id="color4">
               <label for="color4">Черный</label>
             </div>
             <div class="order-form__field order-form__field_color">
-              <input type="checkbox" name="color[]" value="pink" id="color5">
+              <input class="visually-hidden" type="checkbox" name="color[]" value="pink" id="color5">
               <label for="color5">Розовый</label>
             </div>
             <div class="order-form__field order-form__field_color">
-              <input type="checkbox" name="color[]" value="orange" id="color6">
+              <input class="visually-hidden" type="checkbox" name="color[]" value="orange" id="color6">
               <label for="color6">Оранжевый</label>
             </div>
           </div>
@@ -211,17 +211,17 @@
         <ul class="socials__list">
           <li class="socials__item">
             <a class="socials__link socials__link_in" href="#">
-              <img src="./img/icon-insta.svg">
+              <img src="./img/icon-insta.svg" alt="Мы в инстаграме">
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link_fb" href="#">
-              <img src="./img/icon-fb.svg">
+              <img src="./img/icon-fb.svg" alt="Мы в фейсбуке">
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link_tw" href="#">
-              <img src="./img/icon-twitter.svg">
+              <img src="./img/icon-twitter.svg" alt="Мы в твитере">
             </a>
           </li>
         </ul>
@@ -229,7 +229,7 @@
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__logo-pic" src="./img/logo-htmlacademy.svg" alt="HTML Academy" width="27px" height="34px">
+          <img class="copyright__logo-pic" src="./img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
         </a>
       </div>
     </div>

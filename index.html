@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js"></script>
@@ -73,6 +73,7 @@
     <!--<div class="wave"></div>-->
 
     <section class="categories">
+      <h2 class="categories__title visually-hidden">Категории товаров</h2>
       <ul class="categories__list">
         <li class="categories__item">
           <a class="categories__link" href="#">
@@ -132,7 +133,7 @@
             <td class="product-features__value">15 см</td>
           </tr>
         </table>
-        <img class="best-product__pic" src="./img/triple-set-mobile@1x.jpg">
+        <img class="best-product__pic" src="./img/triple-set-mobile@1x.jpg" alt="Товар недели">
         <div class="best-product__price">Цена: 990 руб.</div>
         <a class="best-product__order-button button" href="#">Заказать</a>
       </div>
@@ -146,37 +147,37 @@
         <ul class="features__list">
           <li class="features__item">
             <span class="features__icon">
-              <img class="features__icon-pic" src="./img/icon-feature-flower.svg" width="32" height="37.3">
+              <img class="features__icon-pic" src="./img/icon-feature-flower.svg" width="32" height="38" alt="Экологически чистые материалы">
             </span>
             <h3 class="features__item-title">Экологически<br> чистые материалы</h3>
           </li>
           <li class="features__item">
             <span class="features__icon">
-              <img class="features__icon-pic" src="./img/icon-feature-money.svg" width="46.6" height="27.3">
+              <img class="features__icon-pic" src="./img/icon-feature-money.svg" width="47" height="28" alt="Скандинавский стиль по российской цене">
             </span>
             <h3 class="features__item-title">Скандинавский стиль<br> по российской цене</h3>
           </li>
           <li class="features__item">
             <span class="features__icon">
-              <img class="features__icon-pic" src="./img/icon-feature-heart.svg" width="33" height="27.9">
+              <img class="features__icon-pic" src="./img/icon-feature-heart.svg" width="33" height="28" alt="Увеличивает лайки на фотографиях">
             </span>
             <h3 class="features__item-title">Увеличивает лайки<br> на фотографиях</h3>
           </li>
           <li class="features__item">
             <span class="features__icon">
-              <img class="features__icon-pic" src="./img/icon-feature-ball.svg" width="34.4" height="34.4">
+              <img class="features__icon-pic" src="./img/icon-feature-ball.svg" width="35" height="35" alt="Связано вручную с любовью и умилением">
             </span>
             <h3 class="features__item-title">Связано вручную с<br> любовью и умилением</h3>
           </li>
           <li class="features__item">
             <span class="features__icon">
-              <img class="features__icon-pic" src="./img/icon-feature-rocket.svg" width="54.2" height="23.2">
+              <img class="features__icon-pic" src="./img/icon-feature-rocket.svg" width="55" height="24" alt="Поддержка отечественного производителя">
             </span>
             <h3 class="features__item-title">Поддержка отечественного<br> производителя</h3>
           </li>
           <li class="features__item">
             <span class="features__icon">
-              <img class="features__icon-pic" src="./img/icon-feature-gift.svg" width="32.7" height="32.5">
+              <img class="features__icon-pic" src="./img/icon-feature-gift.svg" width="33" height="33" alt="Поставляется в подарочной упаковке">
             </span>
             <h3 class="features__item-title">Поставляется в<br> подарочной упаковке</h3>
           </li>
@@ -220,7 +221,21 @@
       <div class="contacts__wrapper">
         <header class="contacts__header">
           <h2 class="contacts__title">Контакты</h2>
-          <img class="contacts__icon-flag" src="./img/icon-flag.svg">
+          <!--<img class="contacts__icon-flag" src="./img/icon-flag.svg" width="47" height="82" alt="Флаг">-->
+          <svg class="contacts__icon-flag" xmlns="http://www.w3.org/2000/svg" width="46.68px" height="81.691px" viewBox="-11.34 -28.346 46.68 81.691" enable-background="new -11.34 -28.346 46.68 81.691" xml:space="preserve">
+            <g id="miu">
+              <g id="Artboard-1" transform="translate(-755.000000, -443.000000)">
+                <g id="slice" transform="translate(215.000000, 119.000000)">
+                </g>
+                <g id="editor-flag-triangle-notification-glyph">
+                  <path fill="#63D1BB" d="M751.439,418.545v38.9l38.9-19.451L751.439,418.545z M743.66,496.346v-81.691h3.805v81.691H743.66z"/>
+                </g>
+              </g>
+            </g>
+            <g>
+              <rect x="-11.34" y="-28.346" fill="#231F20" width="3.805" height="81.691"/>
+            </g>
+          </svg>
         </header>
         <table class="contacts__details">
           <tr class="contacts__item">
@@ -238,7 +253,7 @@
           </tr>
         </table>
         <div class="contacts__map">
-          <img src="./img/map-mobile@1x.jpg">
+          <img src="./img/map-mobile@1x.jpg" alt="Карта">
         </div>
         <a class="contacts__write-button button" href="#">Напишите нам</a>
       </div>
@@ -256,17 +271,17 @@
         <ul class="socials__list">
           <li class="socials__item">
             <a class="socials__link socials__link_in" href="#">
-              <img src="./img/icon-insta.svg">
+              <img src="./img/icon-insta.svg" alt="Мы в инстаграме">
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link_fb" href="#">
-              <img src="./img/icon-fb.svg">
+              <img src="./img/icon-fb.svg" alt="Мы в фейсбуке">
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link_tw" href="#">
-              <img src="./img/icon-twitter.svg">
+              <img src="./img/icon-twitter.svg" alt="Мы в твитере">
             </a>
           </li>
         </ul>
@@ -274,7 +289,7 @@
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__logo-pic" src="./img/logo-htmlacademy.svg" alt="HTML Academy" width="27px" height="34px">
+          <img class="copyright__logo-pic" src="./img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
         </a>
       </div>
     </div>

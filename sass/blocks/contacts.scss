@@ -30,12 +30,14 @@
 
   &__header {
     //padding-top: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
 
     @include tablet {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-top: 5px;
+      margin-bottom: 29px;
     }
 
     @include desktop {
@@ -128,7 +130,7 @@
   }
 
   &__value {
-    padding-left: 30px;
+    padding-left: 25px;
 
     //@include tablet {
     //  padding-left: 30px;

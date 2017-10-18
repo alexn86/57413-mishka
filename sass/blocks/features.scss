@@ -2,11 +2,11 @@
   margin-bottom: 25px;
 
   @include tablet {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   @include desktop {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
 
   &__wrapper {
@@ -81,11 +81,14 @@
     text-align: left;
     //padding-bottom: 25px;
     display: block;
-    height: 37px;
-    margin-bottom: 18px;
+    height: 38px;
+    width: 55px;
+    margin-bottom: 17px;
 
     @include tablet {
-      padding-bottom: 20px;
+      //padding-bottom: 20px;
+      margin-bottom: 13px;
+      text-align: center;
     }
   }
 

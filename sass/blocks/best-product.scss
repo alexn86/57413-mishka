@@ -81,7 +81,7 @@
   }
 
   &__desc {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
 
     @include tablet {
       //margin-bottom: 50px;
@@ -126,7 +126,7 @@
     line-height: (24/17);
     font-weight: bold;
     text-align: center;
-    padding: 25px 0;
+    padding: 26px 0;
 
     @include tablet {
       padding: 0 0 35px;

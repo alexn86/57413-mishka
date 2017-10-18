@@ -30,12 +30,12 @@
   }
 
   &__header {
-    padding: 23px 32px;
+    padding: 25px 32px;
     display: flex;
     align-items: center;
 
     @include tablet {
-      padding: 35px 40px 0;
+      padding: 30px 40px 0;
     }
 
     @include desktop {
@@ -49,7 +49,7 @@
     flex-shrink: 0;
 
     @include desktop {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
   }
 
