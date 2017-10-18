@@ -7,20 +7,22 @@
     flex-direction: row;
     flex-grow: 1;
     justify-content: flex-end;
-    padding-left: 320px;
+    padding-left: 100px;
   }
 
   @include desktop {
     padding-left: 0;
+    max-width: 40%;
   }
 
   &__item {
     padding: 0 30px;
     border-top: 1px solid #ececec;
-    flex-shrink: 0;
+    //flex-shrink: 0;
 
     @include tablet {
       padding: 0;
+      border-top: none;
     }
 
     &_delivery {
@@ -30,7 +32,7 @@
         display: block;
         position: absolute;
         right: 0;
-        top: 115px;
+        top: 105px;
         z-index: 10;
         border: none;
       }
@@ -48,13 +50,15 @@
     font-weight: bold;
     text-decoration: none;
     color: $secondary;
+    position: relative;
+    padding-left: 45px;
 
     @include tablet {
       min-height: 90px;
       height: 90px;
       border-top: none;
       border-left: 1px solid #ececec;
-      padding-left: 30px;
+      padding: 0;
     }
   }
 
@@ -62,29 +66,60 @@
     color: #8d8d8d;
   }
 
+  &__link:hover &__icon-pic path {
+    fill: #63d1bb;
+  }
+
   &__link:active {
     color: #cacaca;
   }
 
+  &__link:active &__icon-pic path {
+    fill: rgba(#63d1bb, 0.3);
+  }
+
   &__icon {
-    padding-right: 25px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+
+    @include tablet {
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: none;
+      padding: 0 32px;
+    }
+  }
+
+  &__item_search &__icon-pic {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__item_cart &__icon-pic {
+    width: 20px;
+    height: 19px;
   }
 
   &__icon-pic {
-    width: 20px;
-    height: 20px;
+    path {
+      fill: rgba($secondary, 0.2);
+    }
   }
 
   &__item_search &__link {
     @include tablet {
       font-size: 0;
-      padding-right: 30px;
+      padding-right: 0;
     }
   }
 
   &__item_search &__icon {
-    @include tablet {
-      padding-right: 0;
+    @include desktop {
+      //padding-right: 0;
     }
   }
 }

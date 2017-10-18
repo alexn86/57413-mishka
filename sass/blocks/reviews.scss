@@ -1,11 +1,11 @@
 .reviews {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 
   @include tablet {
     min-height: 457px;
     background: url("./../img/review@1x.jpg") 0 0 no-repeat;
     background-size: contain;
-    margin-bottom: 60px;
+    margin-bottom: 65px;
   }
 
   @include desktop {
@@ -18,17 +18,18 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-content: flex-start;
-      padding-top: 80px;
+      padding-top: 65px;
       align-items: center;
     }
 
     @include desktop {
       padding-left: 175px;
+      padding-top: 75px;
     }
   }
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     @include tablet {
       order: 1;
@@ -41,7 +42,11 @@
       order: 3;
       flex-grow: 1;
       position: relative;
-      padding-top: 50px;
+      padding-top: 40px;
+    }
+
+    @include desktop {
+      padding-top: 45px;
     }
   }
 
@@ -55,9 +60,17 @@
 
   &__text {
     margin-bottom: 30px;
+    line-height: (30 / 15);
 
     @include tablet {
-      margin-bottom: 60px;
+      margin-bottom: 58px;
+      font-size: 17px;
+      line-height: (30 / 17);
+    }
+
+    @include desktop {
+      margin-bottom: 40px;
+      padding-right: 100px;
     }
   }
 
@@ -66,6 +79,12 @@
     font-weight: bold;
     font-style: normal;
     line-height: (24/17);
+
+    @include tablet {
+      font-size: 18px;
+      line-height: (24/18);
+      color: $secondary;
+    }
   }
 
   &__author-profile {
@@ -74,7 +93,7 @@
   }
 
   &__toggles {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
     display: table;
     border-collapse: collapse;
     width: 100%;
@@ -99,6 +118,19 @@
     text-align: center;
     height: 50px;
     vertical-align: middle;
+    font-size: 0;
+
+    polygon {
+      fill: $secondary;
+    }
+
+    &:hover polygon {
+      fill: rgba($secondary, 0.6);
+    }
+
+    &:active polygon {
+      fill: rgba($secondary, 0.3);
+    }
 
     @include tablet {
       border: none;
