@@ -87,7 +87,7 @@
 
     @include tablet {
       order: -1;
-      height: 455px;
+      //height: 455px;
     }
 
     @include desktop {
@@ -101,7 +101,16 @@
 
   &__video img {
     width: 100%;
-    height: 100%;
+    //height: 100%;
+    min-height: 150px;
+
+    @include tablet {
+      min-height: 455px;
+    }
+
+    @include desktop {
+      height: 455px;
+    }
   }
 
   &__play-button {

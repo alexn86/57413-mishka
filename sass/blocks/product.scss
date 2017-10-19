@@ -28,9 +28,11 @@
 
   &__pic {
     width: 100%;
+    min-height: 195px;
 
     @include tablet {
-      height: 334px;
+      //height: 334px;
+      min-height: 334px;
     }
 
     @include desktop {

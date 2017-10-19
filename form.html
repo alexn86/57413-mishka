@@ -12,7 +12,11 @@
   <header class="page-header">
     <div class="page-header__logo">
       <a class="page-header__logo-link" href="index.html">
-        <img class="page-header__logo-pic" src="./img/logo-mobile.svg" width="85" height="35" alt="HTML Academy: Мишка">
+        <picture>
+          <source media="(min-width:1150px)" srcset="./img/logo-desktop.svg">
+          <source media="(min-width:768px)" srcset="./img/logo-tablet.svg">
+          <img class="page-header__logo-pic" src="./img/logo-mobile.svg" width="85" height="35" alt="HTML Academy: Мишка">
+        </picture>
       </a>
     </div>
     <nav class="page-header__nav main-nav main-nav_no-js">
@@ -204,24 +208,24 @@
     <div class="page-footer__wrapper container">
       <div class="page-footer__logo">
         <a class="page-footer__logo-link" href="#">
-          <img class="page-footer__logo-pic" src="./img/logo-mobile.svg" alt="Мишка">
+          <img class="page-footer__logo-pic" src="./img/logo-footer.svg" width="102" height="34" alt="Мишка">
         </a>
       </div>
       <div class="page-footer__socials socials">
         <ul class="socials__list">
           <li class="socials__item">
             <a class="socials__link socials__link_in" href="#">
-              <img src="./img/icon-insta.svg" alt="Мы в инстаграме">
+              <img src="./img/icon-insta.svg" width="22" height="22" alt="Мы в инстаграме">
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link_fb" href="#">
-              <img src="./img/icon-fb.svg" alt="Мы в фейсбуке">
+              <img src="./img/icon-fb.svg" width="15" height="28" alt="Мы в фейсбуке">
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link_tw" href="#">
-              <img src="./img/icon-twitter.svg" alt="Мы в твитере">
+              <img src="./img/icon-twitter.svg" width="24" height="20" alt="Мы в твитере">
             </a>
           </li>
         </ul>
@@ -229,7 +233,7 @@
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__logo-pic" src="./img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+          <img class="copyright__logo-pic" src="./img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy">
         </a>
       </div>
     </div>

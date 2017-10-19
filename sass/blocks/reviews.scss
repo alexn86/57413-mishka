@@ -3,9 +3,16 @@
 
   @include tablet {
     min-height: 457px;
-    background: url("./../img/review@1x.jpg") 0 0 no-repeat;
+    //background: url("./../img/review@1x.jpg") 0 0 no-repeat;
+    background-image: url("./../img/review@1x.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: 65px;
+
+    @include retina {
+      background-image: url("./../img/review@2x.jpg");
+    }
   }
 
   @include desktop {

@@ -37,5 +37,15 @@
   &__logo-pic {
     width: 85px;
     height: 35px;
+
+    @include tablet {
+      width: 112px;
+      height: 46px;
+    }
+
+    @include desktop {
+      width: 148px;
+      height: 72px;
+    }
   }
 }
