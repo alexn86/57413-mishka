@@ -16,22 +16,24 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var run = require("run-sequence");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require('gulp-uglify');
 
-gulp.task("style", function() {
+gulp.task("style", function () {
   gulp.src("sass/style.scss")
-    .pipe(plumber())
-    .pipe(sassGlob())
-    .pipe(sass({
+      .pipe(plumber())
+      .pipe(sassGlob())
+      .pipe(sass({
         includePaths: require('node-normalize-scss').includePaths
-    }))
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(gulp.dest("build/css"))
-    .pipe(minify())
-    .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.stream());
+      }))
+      .pipe(postcss([
+        autoprefixer()
+      ]))
+      .pipe(gulp.dest("build/css"))
+      .pipe(minify())
+      .pipe(rename("style.min.css"))
+      .pipe(gulp.dest("build/css"))
+      .pipe(server.stream());
 });
 
 gulp.task("images", function () {
@@ -46,12 +48,12 @@ gulp.task("images", function () {
 
 gulp.task("webp", function () {
   return gulp.src("img/**/*.{png,jpg}")
-    .pipe(webp({quality: 80}))
-    .pipe(gulp.dest("build/img"));
+      .pipe(webp({quality: 80}))
+      .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("img/{icon,logo}-*.svg")
+  return gulp.src("img/icon-*.svg, logo-desktop.svg, logo-htmlacademy.svg")
       .pipe(svgstore({
         inlineSvg: true
       }))
@@ -64,7 +66,15 @@ gulp.task("html", function () {
       .pipe(posthtml([
         include()
       ]))
+      .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(gulp.dest("build"));
+});
+
+gulp.task("compress", function () {
+  return gulp.src("js/app.js")
+      .pipe(uglify())
+      .pipe(rename("app.min.js"))
+      .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("copy", function () {
@@ -87,13 +97,14 @@ gulp.task("build", function (done) {
       "clean",
       "copy",
       "style",
+      "compress",
       "sprite",
       "html",
       done
   );
 });
 
-gulp.task("serve", function() {
+gulp.task("serve", function () {
   server.init({
     server: "build/",
     notify: false,
