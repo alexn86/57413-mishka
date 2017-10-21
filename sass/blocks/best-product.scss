@@ -14,16 +14,18 @@
     @include tablet {
       position: relative;
       width: 50%;
-      height: 405px;
-      min-height: 405px;
+      //height: 404px;
+      height: auto;
+      min-height: 404px;
       padding-right: 45px;
       display: flex;
       flex-direction: column;
     }
 
     @include desktop {
-      height: 635px;
-      min-height: 635px;
+      //height: 636px;
+      height: auto;
+      min-height: 636px;
       padding-right: 60px;
       padding-left: 175px;
       padding-top: 165px;
@@ -101,23 +103,24 @@
 
     @include tablet {
       //margin-bottom: 60px;
-      margin-bottom: 0;
+      //margin-bottom: 0;
     }
   }
 
   &__pic {
     display: block;
     margin: 0 auto;
+    height: 315px;
 
     @include tablet {
       position: absolute;
       top: 0;
       left: 100%;
-      height: 100%;
+      height: 404px;
     }
 
     @include desktop {
-      height: 635px;
+      height: 636px;
     }
   }
 

@@ -182,13 +182,20 @@
     }
   }
 
-  &__map img {
+  &__map-pic {
     height: 100vh;
     width: 100%;
 
     @include tablet {
       height: 460px;
     }
+  }
+
+  &__map-pin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &__write-button {

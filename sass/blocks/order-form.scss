@@ -293,10 +293,10 @@
       border-color: #63d1bb;
     }
 
-    input[type="tel"]:hover ~ &-icon path,
-    input[type="tel"]:focus ~ &-icon path,
-    input[type="email"]:hover ~ &-icon path,
-    input[type="email"]:focus ~ &-icon path {
+    input[type="tel"]:hover ~ &-icon svg,
+    input[type="tel"]:focus ~ &-icon svg,
+    input[type="email"]:hover ~ &-icon svg,
+    input[type="email"]:focus ~ &-icon svg {
       fill: #63d1bb;
     }
 
@@ -383,7 +383,7 @@
     right: 0;
     text-align: center;
 
-    path {
+    svg {
       fill: rgba($secondary, 0.2);
     }
 

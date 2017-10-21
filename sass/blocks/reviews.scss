@@ -3,9 +3,16 @@
 
   @include tablet {
     min-height: 457px;
-    background: url("./../img/review@1x.jpg") 0 0 no-repeat;
+    //background: url("./../img/review@1x.jpg") 0 0 no-repeat;
+    background-image: url("./../img/review@1x.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: 65px;
+
+    @include retina {
+      background-image: url("./../img/review@2x.jpg");
+    }
   }
 
   @include desktop {
@@ -119,16 +126,13 @@
     height: 50px;
     vertical-align: middle;
     font-size: 0;
+    fill: $secondary;
 
-    polygon {
-      fill: $secondary;
-    }
-
-    &:hover polygon {
+    &:hover {
       fill: rgba($secondary, 0.6);
     }
 
-    &:active polygon {
+    &:active {
       fill: rgba($secondary, 0.3);
     }
 

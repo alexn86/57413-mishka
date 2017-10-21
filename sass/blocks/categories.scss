@@ -86,11 +86,11 @@
     color: rgba(#ffffff, 0.3);
   }
 
-  &__link:hover &__icon path {
+  &__link:hover &__icon-pic {
     fill: rgba(#149080, 0.7);
   }
 
-  &__link:active &__icon path {
+  &__link:active &__icon-pic {
     fill: rgba(#149080, 0.3);
   }
 
@@ -103,13 +103,11 @@
     text-align: center;
     flex-shrink: 0;
     font-size: 0;
-
-    path {
-      fill: rgba(#149080, 0.5);
-    }
   }
 
   &__icon-pic {
+    fill: rgba(#149080, 0.5);
+
     &_interior {
       width: 40px;
       height: 62px;

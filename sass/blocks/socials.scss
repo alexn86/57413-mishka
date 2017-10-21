@@ -1,12 +1,31 @@
 .socials {
   &__list {
-    text-align: center;
     font-size: 0;
     margin: auto;
+    display: flex;
+    align-items: center;
   }
 
   &__item {
     display: inline-block;
-    padding: 0 20px;
+    //padding: 0 20px;
+    //padding: 0;
+  }
+
+  &__item:not(:last-of-type) {
+    padding-right: 40px;
+  }
+
+  &__link {
+    display: inline-block;
+    fill: #231f20;
+
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      fill: rgba(#46c1ae, 0.3);
+    }
   }
 }

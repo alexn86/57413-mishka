@@ -1,4 +1,23 @@
 .copyright {
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: $secondary;
+
+    &:hover .copyright__logo {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      color: rgba($secondary, 0.3);
+    }
+
+    &:active .copyright__logo {
+      fill: rgba(#46c1ae, 0.3);
+    }
+  }
+
   &__text {
     padding-right: 30px;
     font-size: 19px;
@@ -9,5 +28,6 @@
   &__logo {
     width: 27px;
     height: 34px;
+    fill: #63d1bb;
   }
 }
