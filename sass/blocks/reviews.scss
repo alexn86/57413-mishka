@@ -126,16 +126,13 @@
     height: 50px;
     vertical-align: middle;
     font-size: 0;
+    fill: $secondary;
 
-    polygon {
-      fill: $secondary;
-    }
-
-    &:hover polygon {
+    &:hover {
       fill: rgba($secondary, 0.6);
     }
 
-    &:active polygon {
+    &:active {
       fill: rgba($secondary, 0.3);
     }
 

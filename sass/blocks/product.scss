@@ -122,18 +122,16 @@
   &__add-cart-button {
     font-size: 0;
 
-    &:hover .product__icon path {
+    &:hover .product__icon {
       fill: #63d1bb;
     }
 
-    &:active .product__icon path {
+    &:active .product__icon {
       fill: rgba(#63d1bb, 0.3);
     }
   }
 
   &__icon {
-    path {
-      fill: rgba($secondary, 0.2);
-    }
+    fill: rgba($secondary, 0.2);
   }
 }

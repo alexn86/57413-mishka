@@ -28,6 +28,19 @@
     }
   }
 
+  &__logo-link {
+    fill: #231f20;
+    display: inline-block;
+
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      fill: rgba(#46c1ae, 0.3);
+    }
+  }
+
   &__logo-pic {
     display: none;
 
