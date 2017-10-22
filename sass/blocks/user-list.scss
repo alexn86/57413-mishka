@@ -7,12 +7,13 @@
     flex-direction: row;
     flex-grow: 1;
     justify-content: flex-end;
-    padding-left: 100px;
+    padding-left: 120px;
   }
 
   @include desktop {
     padding-left: 0;
     max-width: 40%;
+    overflow: hidden;
   }
 
   &__item {
@@ -23,19 +24,6 @@
     @include tablet {
       padding: 0;
       border-top: none;
-    }
-
-    &_delivery {
-      display: none;
-
-      @include tablet {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 105px;
-        z-index: 10;
-        border: none;
-      }
     }
   }
 

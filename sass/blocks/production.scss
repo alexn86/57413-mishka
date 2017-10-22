@@ -24,8 +24,9 @@
 
     @include desktop {
       position: relative;
-      height: 455px;
+      //height: 455px;
       padding-left: 685px;
+      min-height: 455px;
     }
   }
 
@@ -41,7 +42,7 @@
     @include desktop {
       flex-direction: column;
       align-items: flex-start;
-      padding: 40px 60px 0 75px;
+      padding: 45px 60px 0 75px;
     }
   }
 
@@ -95,7 +96,8 @@
       left: 0;
       top: 0;
       width: 685px;
-      height: 100%;
+      //height: 100%;
+      height: 455px;
     }
   }
 
@@ -134,7 +136,7 @@
     padding: 30px 35px;
 
     @include tablet {
-      padding: 25px 40px 45px;
+      padding: 30px 40px 45px;
     }
 
     @include desktop {

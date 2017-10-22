@@ -46,7 +46,7 @@
   }
 
   &__link {
-    padding: 0 30px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,7 +65,8 @@
       line-height: (30/20);
       height: 115px;
       //height: 120px;
-      padding: 0 35px;
+      padding: 25px 35px;
+      overflow: hidden;
     }
   }
 
@@ -96,6 +97,13 @@
 
   &__name {
     padding-bottom: 5px;
+    //height: 100%;
+    overflow: hidden;
+    //padding-right: 10px;
+
+    @include tablet {
+      padding-bottom: 0;
+    }
   }
 
   &__icon {
