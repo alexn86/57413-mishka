@@ -83,6 +83,7 @@
     text-decoration: none;
     color: $secondary;
     padding-left: 45px;
+    overflow: hidden;
 
     @include tablet {
       font-size: 15px;

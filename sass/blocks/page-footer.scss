@@ -21,10 +21,12 @@
 
   &__logo {
     flex-shrink: 0;
+    display: none;
 
     @include tablet {
       //flex-grow: 1;
       width: 33.3%;
+      display: block;
     }
   }
 
