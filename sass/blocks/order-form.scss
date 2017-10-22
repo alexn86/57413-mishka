@@ -52,6 +52,7 @@
     text-align: left;
     margin-bottom: 25px;
     text-transform: uppercase;
+    display: block;
 
     @include tablet {
       width: 25%;

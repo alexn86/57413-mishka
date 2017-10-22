@@ -45,12 +45,12 @@
         <ul class="main-nav__list user-list">
           <li class="user-list__item user-list__item_search">
             <a class="user-list__link" href="#">
-                <span class="user-list__icon">
-                  <svg class="user-list__icon-pic" width="18" height="18" aria-labelledby="title">
-                  <title>Поиск</title>
+              <span class="user-list__icon">
+                <svg class="user-list__icon-pic" width="18" height="18" aria-labelledby="search">
+                  <title id="search">Поиск по сайту</title>
                   <use xlink:href="#icon-search"></use>
                 </svg>
-                </span>
+              </span>
               Поиск по сайту
             </a>
           </li>
@@ -153,10 +153,10 @@
 
       <div class="order-form__fieldset container">
         <div class="order-form__fieldset-item">
-          <div class="order-form__fieldset-title">Тел</div>
+          <label class="order-form__fieldset-title" for="tel">Тел</label>
           <div class="order-form__fieldset-group">
             <div class="order-form__field order-form__field_tel">
-              <input type="tel" name="tel" placeholder="+7 XXX XX XX*" required>
+              <input type="tel" name="tel" placeholder="+7 XXX XX XX*" id="tel" required>
               <span class="order-form__field-icon">
                 <svg width="25" height="25">
                   <use xlink:href="#icon-phone"></use>
@@ -166,10 +166,10 @@
           </div>
         </div>
         <div class="order-form__fieldset-item">
-          <div class="order-form__fieldset-title">E-mail</div>
+          <label class="order-form__fieldset-title" for="email">E-mail</label>
           <div class="order-form__fieldset-group">
             <div class="order-form__field order-form__field_email">
-              <input type="email" name="email" placeholder="Ваш Email*" required>
+              <input type="email" name="email" placeholder="Ваш Email*" id="email" required>
               <span class="order-form__field-icon">
                 <svg width="32" height="32">
                   <use xlink:href="#icon-mail"></use>
@@ -182,10 +182,10 @@
 
       <div class="order-form__fieldset container">
         <div class="order-form__fieldset-item">
-          <div class="order-form__fieldset-title">Доп</div>
+          <label class="order-form__fieldset-title" for="comment">Доп</label>
           <div class="order-form__fieldset-group">
             <div class="order-form__field">
-              <textarea name="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea name="comment" id="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </div>
         </div>
@@ -211,24 +211,24 @@
         <ul class="socials__list">
           <li class="socials__item">
             <a class="socials__link socials__link_in" href="#">
-              <svg width="22" height="22" aria-labelledby="title">
-                <title>Мы в инстаграмме</title>
+              <svg width="22" height="22" aria-labelledby="socials-in">
+                <title id="socials-in">Мы в инстаграмме</title>
                 <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link_fb" href="#">
-              <svg width="15" height="28" aria-labelledby="title">
-                <title>Мы в фейсбуке</title>
+              <svg width="15" height="28" aria-labelledby="socials-fb">
+                <title id="socials-fb">Мы в фейсбуке</title>
                 <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link_tw" href="#">
-              <svg width="24" height="20" aria-labelledby="title">
-                <title>Мы в твиттере</title>
+              <svg width="24" height="20" aria-labelledby="socials-tw">
+                <title id="socials-tw">Мы в твиттере</title>
                 <use xlink:href="#icon-twitter"></use>
               </svg>
             </a>
@@ -238,8 +238,8 @@
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <b class="copyright__text">Разработано</b>
-          <svg class="copyright__logo" width="27" height="34" aria-labelledby="title">
-            <title>HTML Academy</title>
+          <svg class="copyright__logo" width="27" height="34" aria-labelledby="copyright">
+            <title id="copyright">HTML Academy</title>
             <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
