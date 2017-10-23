@@ -4,7 +4,6 @@
 
   @include tablet {
     flex-direction: row;
-    //order: 2;
     position: absolute;
     z-index: 10;
     top: 105px;
@@ -32,7 +31,7 @@
     }
   }
 
-  &_desktop &__item {
+  &_desktop .main-nav__item {
     &:nth-of-type(n+3) {
       @include desktop {
         display: block;
@@ -40,7 +39,7 @@
     }
   }
 
-  &_desktop &__link {
+  &_desktop .menu-list__link {
     font-size: 15px;
     line-height: (24/15);
     border: none;
@@ -50,87 +49,85 @@
     padding-right: 10px;
   }
 
-  &__item {
-    padding: 0 30px;
-    border-top: 1px solid #ececec;
-
-    @include tablet {
-      padding: 0;
-      min-width: 170px;
-      border: none;
-    }
-
+  &_desktop .menu-list__item:not(:first-child) .menu-list__link {
     @include desktop {
-      min-width: 185px;
-    }
-
-    &:nth-of-type(n+3) {
-      @include desktop {
-        display: none;
-      }
+      border: none;
+      padding-left: 0;
     }
   }
 
-  &__link {
-    min-height: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  &_desktop .menu-list__item:nth-of-type(2n + 2) .menu-list__link {
+    @include desktop {
+      border: none;
+      padding-left: 35px;
+    }
+  }
+}
+
+.menu-list__item {
+  padding: 0 30px;
+  border-top: 1px solid #ececec;
+
+  @include tablet {
+    padding: 0;
+    min-width: 170px;
+    border: none;
+  }
+
+  @include desktop {
+    min-width: 185px;
+  }
+
+  &:nth-of-type(n+3) {
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+.menu-list__link {
+  min-height: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 17px;
+  line-height: (24/17);
+  font-weight: bold;
+  text-decoration: none;
+  color: $secondary;
+  padding-left: 45px;
+  overflow: hidden;
+
+  @include tablet {
+    font-size: 15px;
+    line-height: (24/15);
+    border: none;
+    padding-left: 0;
+    min-height: auto;
+    height: auto;
+  }
+
+  @include desktop {
     font-size: 17px;
     line-height: (24/17);
-    font-weight: bold;
-    text-decoration: none;
-    color: $secondary;
-    padding-left: 45px;
-    overflow: hidden;
-
-    @include tablet {
-      font-size: 15px;
-      line-height: (24/15);
-      border: none;
-      padding-left: 0;
-      min-height: auto;
-      height: auto;
-      //padding-right: 10px;
-    }
-
-    @include desktop {
-      font-size: 17px;
-      line-height: (24/17);
-      //border-left: 1px solid #ececec;
-      min-height: 90px;
-      height: 90px;
-      padding-right: 35px;
-    }
+    min-height: 90px;
+    height: 90px;
+    padding-right: 35px;
   }
+}
 
-  &__item:not(:first-child) &__link {
-    @include desktop {
-      border-left: 1px solid #ececec;
-      padding-left: 35px;
-    }
+.menu-list__item:not(:first-child) .menu-list__link {
+  @include desktop {
+    border-left: 1px solid #ececec;
+    padding-left: 35px;
   }
+}
 
-  &_desktop &__item:not(:first-child) &__link {
-    @include desktop {
-      border: none;
-      padding-left: 0;
-    }
-  }
+.menu-list__link:hover {
+  color: #8d8d8d;
+}
 
-  &_desktop &__item:nth-of-type(2n + 2) &__link {
-    @include desktop {
-      border: none;
-      padding-left: 35px;
-    }
-  }
-
-  &__link:hover {
-    color: #8d8d8d;
-  }
-
-  &__link:active {
-    color: #cacaca;
-  }
+.menu-list__link:active {
+  color: #cacaca;
 }

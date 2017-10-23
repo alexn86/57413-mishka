@@ -9,91 +9,72 @@
     margin-bottom: 10px;
   }
 
-  &__wrapper {
+  .features__wrapper {
     @include desktop {
       padding-left: 175px;
     }
   }
+}
 
-  &__list {
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      height: 485px;
-      max-height: 485px;
-    }
-
-    @include desktop {
-      //max-height: none;
-      //flex-direction: row;
-      align-content: flex-start;
-    }
+.features__list {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 485px;
+    max-height: 485px;
   }
 
-  &__item {
-    padding-bottom: 30px;
+  @include desktop {
+    align-content: flex-start;
+  }
+}
 
-    @include tablet {
-      width: 50%;
-      padding-bottom: 60px;
-      padding-right: 10px;
-    }
+.features__item {
+  padding-bottom: 30px;
 
-    @include desktop {
-      width: 350px;
-    }
+  @include tablet {
+    width: 50%;
+    padding-bottom: 60px;
+    padding-right: 10px;
   }
 
-  &__title {
-    margin-bottom: 33px;
+  @include desktop {
+    width: 350px;
+  }
+}
 
-    @include tablet {
-      margin-bottom: 40px;
-    }
+.features__title {
+  margin-bottom: 33px;
 
-    @include desktop {
-      margin-bottom: 50px;
-    }
+  @include tablet {
+    margin-bottom: 40px;
   }
 
-  &__item-title {
-    font-size: 17px;
-    line-height: (20/17);
-
-    @include tablet {
-      font-size: 20px;
-      line-height: (22/20);
-    }
+  @include desktop {
+    margin-bottom: 50px;
   }
+}
 
-  &__item-title br {
-    display: none;
+.features__item-title {
+  font-size: 17px;
+  line-height: (20/17);
 
-    @include tablet {
-      display: inline;
-    }
+  @include tablet {
+    font-size: 20px;
+    line-height: (22/20);
   }
+}
 
-  &__icon {
-    //width: 55px;
-    //text-align: center;
-    text-align: left;
-    //padding-bottom: 25px;
-    display: block;
-    height: 38px;
-    width: 55px;
-    margin-bottom: 17px;
+.features__icon {
+  text-align: left;
+  display: block;
+  height: 38px;
+  width: 55px;
+  margin-bottom: 17px;
 
-    @include tablet {
-      //padding-bottom: 20px;
-      margin-bottom: 13px;
-      text-align: center;
-    }
-  }
-
-  &__icon-pic {
-    //padding-bottom: 15px;
-    //height: 40px;
+  @include tablet {
+    margin-bottom: 13px;
+    text-align: center;
   }
 }

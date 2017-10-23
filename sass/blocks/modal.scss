@@ -16,24 +16,24 @@
   &_opened {
     visibility: visible;
   }
+}
 
-  &__wrapper {
-    width: 100%;
-    border-top: 1px solid #c7c7c7;
-    border-bottom: 1px solid #c7c7c7;
-    background-color: #ffffff;
-    padding: 30px 30px 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.modal__wrapper {
+  width: 100%;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  background-color: #ffffff;
+  padding: 30px 30px 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @include tablet {
+    width: 566px;
     box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
-
-    @include tablet {
-      width: 566px;
-      box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
-      border: solid 1px #c6c6c6;
-      padding: 50px 105px;
-    }
+    border: solid 1px #c6c6c6;
+    padding: 50px 105px;
   }
 }

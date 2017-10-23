@@ -4,11 +4,11 @@
   }
 
   @include mobile {
-    &__wrapper {
+    .main-nav__wrapper {
       display: none;
     }
 
-    &_opened &__wrapper {
+    &_opened .main-nav__wrapper {
       display: block;
       position: absolute;
       z-index: 20;
@@ -19,113 +19,109 @@
       background-color: #ffffff;
     }
 
-    &_no-js &__toggle {
+    &_no-js .main-nav__toggle {
       display: none;
     }
 
-    &_no-js &__wrapper {
+    &_no-js .main-nav__wrapper {
       display: block;
       position: static;
       border-bottom: none;
     }
   }
 
-  &__wrapper {
-    //display: flex;
-    //flex-direction: column;
-
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      //flex-wrap: wrap;
-      position: relative;
-    }
-
-    @include desktop {
-      justify-content: space-between;
-    }
-  }
-
-  &__list {
-    list-style: none;
-  }
-
-  &__toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    display: block;
-    width: 20px;
-    height: 20px;
-    z-index: 10;
-    outline: none;
-
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &__toggle-icon,
-  &__toggle-icon::before,
-  &__toggle-icon::after {
-    width: 20px;
-    height: 2px;
-    background-color: #000000;
-    display: block;
-  }
-
-  &__toggle-icon {
-    transition-duration: 0s;
-    transition-delay: 0.1s;
-    position: relative;
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      transition-property: margin, transform;
-      transition-duration: 0.2s;
-      transition-delay: 0.2s, 0s;
-    }
-
-    &::before {
-      margin-top: -6px;
-    }
-
-    &::after {
-      margin-top: 6px;
-    }
-  }
-
-  &_opened &__toggle-icon {
+  &_opened .main-nav__toggle-icon {
     background-color: transparent;
   }
 
-  &_opened &__toggle-icon::before {
+  &_opened .main-nav__toggle-icon::before {
     margin-top: 0;
     transform: rotate(45deg);
     transition-delay: 0s, 0.2s;
   }
 
-  &_opened &__toggle-icon::after {
+  &_opened .main-nav__toggle-icon::after {
     margin-top: 0;
     transform: rotate(-45deg);
     transition-delay: 0s, 0.2s;
   }
+}
 
-  &__delivery {
+.main-nav__wrapper {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  @include desktop {
+    justify-content: space-between;
+  }
+}
+
+.main-nav__list {
+  list-style: none;
+}
+
+.main-nav__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  outline: none;
+
+  @include tablet {
     display: none;
+  }
+}
 
-    @include tablet {
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 105px;
-      z-index: 10;
-      border: none;
-    }
+.main-nav__toggle-icon,
+.main-nav__toggle-icon::before,
+.main-nav__toggle-icon::after {
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  display: block;
+}
+
+.main-nav__toggle-icon {
+  transition-duration: 0s;
+  transition-delay: 0.1s;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    transition-property: margin, transform;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s, 0s;
+  }
+
+  &::before {
+    margin-top: -6px;
+  }
+
+  &::after {
+    margin-top: 6px;
+  }
+}
+
+.main-nav__delivery {
+  display: none;
+
+  @include tablet {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 105px;
+    z-index: 10;
+    border: none;
   }
 }

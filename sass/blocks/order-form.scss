@@ -1,442 +1,427 @@
-.order-form {
-  &__header {
-    font-size: 13px;
-    line-height: (24/13);
-    margin-bottom: 25px;
-    margin-top: -7px;
+.order-form__header {
+  font-size: 13px;
+  line-height: (24/13);
+  margin-bottom: 25px;
+  margin-top: -7px;
 
-    @include tablet {
-      font-size: 17px;
-      line-height: (30/17);
-      margin-bottom: 7px;
-    }
-
-    @include desktop {
-      padding: 0 225px;
-    }
-  }
-
-  &__fieldset {
-    margin-bottom: 31px;
-
-    @include tablet {
-      //margin-bottom: 26px;
-      margin-bottom: 0;
-      padding-top: 50px;
-      padding-bottom: 26px;
-    }
-
-    @include desktop {
-      padding-right: 225px;
-    }
-  }
-
-  &__fieldset:nth-of-type(2n+2) {
-    @include tablet {
-      background-color: #f1f1f1;
-    }
-  }
-
-  &__fieldset-item {
-    @include tablet {
-      display: flex;
-    }
-  }
-
-  &__fieldset-title {
+  @include tablet {
     font-size: 17px;
-    line-height: (16/17);
-    font-weight: bold;
-    color: #63d1bb;
-    overflow: hidden;
-    text-align: left;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    display: block;
-
-    @include tablet {
-      width: 25%;
-      margin-bottom: 0;
-      padding-top: 17px;
-      flex-shrink: 0;
-    }
-
-    @include desktop {
-      width: 175px;
-      padding-left: 60px;
-    }
+    line-height: (30/17);
+    margin-bottom: 7px;
   }
 
-  &__fieldset-title::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-    height: 1px;
-    background-color: #63d1bb;
-    position: relative;
-    margin-right: -100%;
-    right: -25px;
+  @include desktop {
+    padding: 0 225px;
+  }
+}
 
-    @include tablet {
-      display: none;
+.order-form__fieldset {
+  margin-bottom: 31px;
+
+  @include tablet {
+    margin-bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 26px;
+  }
+
+  @include desktop {
+    padding-right: 225px;
+  }
+}
+
+.order-form__fieldset:nth-of-type(2n+2) {
+  @include tablet {
+    background-color: #f1f1f1;
+  }
+}
+
+.order-form__fieldset-item {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.order-form__fieldset-title {
+  font-size: 17px;
+  line-height: (16/17);
+  font-weight: bold;
+  color: #63d1bb;
+  overflow: hidden;
+  text-align: left;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  display: block;
+
+  @include tablet {
+    width: 25%;
+    margin-bottom: 0;
+    padding-top: 17px;
+    flex-shrink: 0;
+  }
+
+  @include desktop {
+    width: 175px;
+    padding-left: 60px;
+  }
+}
+
+.order-form__fieldset-title::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 1px;
+  background-color: #63d1bb;
+  position: relative;
+  margin-right: -100%;
+  right: -25px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.order-form__fieldset-group {
+  width: 100%;
+}
+
+.order-form__fieldset-group_color {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.order-form__field {
+  margin-bottom: 16px;
+  position: relative;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+
+  &_text {
+    label {
+      padding-top: 4px;
+
+      @include tablet {
+        padding-top: 15px;
+      }
     }
-  }
 
-  &__fieldset-group {
-    width: 100%;
-  }
-
-  &__fieldset-group_color {
     @include tablet {
       display: flex;
-      flex-wrap: wrap;
     }
   }
 
-  &__field {
-    margin-bottom: 16px;
-    position: relative;
+  &_tel {
+    margin-top: -6px;
+    margin-bottom: 31px;
 
     @include tablet {
       margin-bottom: 24px;
     }
-
-    &_text {
-      //margin-bottom: 20px;
-
-      label {
-        padding-top: 4px;
-
-        @include tablet {
-          padding-top: 15px;
-        }
-      }
-
-      @include tablet {
-        display: flex;
-      }
-    }
-
-    &_tel {
-      margin-top: -6px;
-      margin-bottom: 31px;
-
-      @include tablet {
-        margin-bottom: 24px;
-      }
-    }
-
-    &_email {
-      margin-top: -5px;
-    }
-
-    input[type="radio"] {
-      //display: none;
-    }
-
-    input[type="radio"] ~ label {
-      //display: block;
-      padding-left: 63px;
-      min-height: 40px;
-      padding-top: 10px;
-
-      @include tablet {
-        min-height: 52px;
-        padding-left: 81px;
-        padding-top: 15px;
-      }
-    }
-
-    input[type="radio"] ~ label::before,
-    input[type="radio"] ~ label::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      box-sizing: border-box;
-      cursor: pointer;
-    }
-
-    input[type="radio"] ~ label::before {
-      top: 0;
-      left: 0;
-      z-index: 1;
-      width: 40px;
-      height: 40px;
-      background-color: transparent;
-      border: 2px solid #444444;
-
-      @include tablet {
-        width: 52px;
-        height: 52px;
-      }
-    }
-
-    input[type="radio"] ~ label::after {
-      top: 12px;
-      left: 12px;
-      z-index: 2;
-      width: 16px;
-      height: 16px;
-      background-color: #63d1bb;
-      display: none;
-
-      @include tablet {
-        width: 22px;
-        height: 22px;
-        top: 15px;
-        left: 15px;
-      }
-    }
-
-    input[type="radio"]:checked ~ label::after {
-      display: block;
-    }
-
-    input[type="radio"] ~ label:hover::before {
-      border-color: #63d1bb;
-    }
-
-    input[type="radio"] ~ label:active::before {
-      border-color: rgba(#444444, 0.3);
-    }
-
-    input[type="checkbox"] {
-      //display: none;
-    }
-
-    input[type="checkbox"] ~ label {
-      //display: block;
-      padding-left: 63px;
-      min-height: 39px;
-      padding-top: 11px;
-      margin-bottom: 22px;
-
-      @include tablet {
-        min-height: 52px;
-        margin-bottom: 0;
-        padding-left: 81px;
-        padding-top: 15px;
-      }
-    }
-
-    input[type="checkbox"] ~ label::before,
-    input[type="checkbox"] ~ label::after {
-      content: "";
-      position: absolute;
-      box-sizing: border-box;
-      cursor: pointer;
-    }
-
-    input[type="checkbox"] ~ label::before {
-      top: 0;
-      left: 0;
-      z-index: 1;
-      width: 39px;
-      height: 39px;
-      background-color: transparent;
-      border: 2px solid #444444;
-
-      @include tablet {
-        width: 54px;
-        height: 52px;
-      }
-    }
-
-    input[type="checkbox"] ~ label::after {
-      width: 22px;
-      height: 16px;
-      z-index: 2;
-      background: url("./../img/icon-tick.svg") no-repeat;
-      background-size: cover;
-      left: 9px;
-      top: 13px;
-      display: none;
-
-      @include tablet {
-        width: 33px;
-        height: 23px;
-        top: 16px;
-        left: 12px;
-      }
-    }
-
-    input[type="checkbox"]:checked ~ label::after {
-      display: block;
-    }
-
-    input[type="checkbox"] ~ label:hover::before {
-      border-color: #63d1bb;
-    }
-
-    input[type="checkbox"] ~ label:active::before {
-      border-color: rgba(#444444, 0.3);
-    }
-
-    input[type="text"],
-    input[type="tel"],
-    input[type="email"] {
-      border: none;
-      outline: none;
-      border-bottom: 2px solid $secondary;
-      color: #444444;
-      background-color: transparent;
-    }
-
-    input[type="text"]:hover,
-    input[type="text"]:focus,
-    input[type="tel"]:hover,
-    input[type="tel"]:focus,
-    input[type="email"]:hover,
-    input[type="email"]:focus,
-    textarea:hover,
-    textarea:focus {
-      border-color: #63d1bb;
-    }
-
-    input[type="tel"]:hover ~ &-icon svg,
-    input[type="tel"]:focus ~ &-icon svg,
-    input[type="email"]:hover ~ &-icon svg,
-    input[type="email"]:focus ~ &-icon svg {
-      fill: #63d1bb;
-    }
-
-    input[type="text"] {
-      padding: 15px 0;
-      margin-bottom: 0;
-
-      @include tablet {
-        padding: 11px 18px 13px 18px;
-      }
-    }
-
-    input[type="tel"],
-    input[type="email"] {
-      padding: 0 40px 15px 0;
-
-      @include tablet {
-        padding: 17px 60px 12px 16px;
-      }
-    }
-
-    textarea {
-      height: 142px;
-      border: 2px solid #444444;
-      color: #444444;
-      resize: none;
-      padding: 15px;
-      outline: none;
-    }
   }
 
-  &__field_color {
-    @include tablet {
-      width: 50%;
-    }
-
-    @include desktop {
-      width: 33.3%;
-      //width: 262px;
-    }
+  &_email {
+    margin-top: -5px;
   }
 
-  &__field label {
-    font-size: 17px;
-    line-height: (18/17);
-    font-weight: bold;
-    display: block;
-    color: $secondary;
+  input[type="radio"] ~ label {
+    padding-left: 63px;
+    min-height: 40px;
+    padding-top: 10px;
 
     @include tablet {
-      font-size: 19px;
-      line-height: (18/19);
-      padding-right: 25px;
+      min-height: 52px;
+      padding-left: 81px;
+      padding-top: 15px;
     }
   }
 
-  &__field input[type="text"],
-  &__field input[type="tel"],
-  &__field input[type="email"],
-  &__field textarea {
-    font-size: 17px;
-    line-height: (18/17);
-    font-family: "OpenSans";
-    width: 100%;
-
-    @include tablet {
-      font-size: 19px;
-      line-height: (18/19);
-    }
-  }
-
-  &__field input[type="text"]::placeholder,
-  &__field input[type="tel"]::placeholder,
-  &__field input[type="email"]::placeholder,
-  &__field textarea::placeholder {
-    color: rgba($secondary, 0.3);
-  }
-
-  &__field-icon {
+  input[type="radio"] ~ label::before,
+  input[type="radio"] ~ label::after {
+    content: "";
     position: absolute;
-    width: 40px;
-    height: 100%;
-    top: 0;
-    right: 0;
-    text-align: center;
-
-    svg {
-      fill: rgba($secondary, 0.2);
-    }
-
-    @include tablet {
-      right: 16px;
-      width: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @include desktop {
-      right: 0;
-    }
-  }
-
-  &__footer {
-    margin-top: -20px;
-
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: -6px;
-    }
-
-    @include desktop {
-      padding: 0 225px;
-    }
-  }
-
-  &__note {
-    margin-bottom: 30px;
-    font-size: 14px;
-    line-height: (16/14);
-
-    @include tablet {
-      order: 1;
-      margin-bottom: 0;
-      font-size: 17px;
-      line-height: (30/17);
-    }
-  }
-
-  &__send-button {
-    background: none;
-    width: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
     cursor: pointer;
+  }
+
+  input[type="radio"] ~ label::before {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #444444;
 
     @include tablet {
-      width: auto;
-      padding: 0 30px;
+      width: 52px;
+      height: 52px;
     }
+  }
+
+  input[type="radio"] ~ label::after {
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+    background-color: #63d1bb;
+    display: none;
+
+    @include tablet {
+      width: 22px;
+      height: 22px;
+      top: 15px;
+      left: 15px;
+    }
+  }
+
+  input[type="radio"]:checked ~ label::after {
+    display: block;
+  }
+
+  input[type="radio"] ~ label:hover::before {
+    border-color: #63d1bb;
+  }
+
+  input[type="radio"] ~ label:active::before {
+    border-color: rgba(#444444, 0.3);
+  }
+
+  input[type="checkbox"] ~ label {
+    padding-left: 63px;
+    min-height: 39px;
+    padding-top: 11px;
+    margin-bottom: 22px;
+
+    @include tablet {
+      min-height: 52px;
+      margin-bottom: 0;
+      padding-left: 81px;
+      padding-top: 15px;
+    }
+  }
+
+  input[type="checkbox"] ~ label::before,
+  input[type="checkbox"] ~ label::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] ~ label::before {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 39px;
+    height: 39px;
+    background-color: transparent;
+    border: 2px solid #444444;
+
+    @include tablet {
+      width: 54px;
+      height: 52px;
+    }
+  }
+
+  input[type="checkbox"] ~ label::after {
+    width: 22px;
+    height: 16px;
+    z-index: 2;
+    background: url("./../img/icon-tick.svg") no-repeat;
+    background-size: cover;
+    left: 9px;
+    top: 13px;
+    display: none;
+
+    @include tablet {
+      width: 33px;
+      height: 23px;
+      top: 16px;
+      left: 12px;
+    }
+  }
+
+  input[type="checkbox"]:checked ~ label::after {
+    display: block;
+  }
+
+  input[type="checkbox"] ~ label:hover::before {
+    border-color: #63d1bb;
+  }
+
+  input[type="checkbox"] ~ label:active::before {
+    border-color: rgba(#444444, 0.3);
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid $secondary;
+    color: #444444;
+    background-color: transparent;
+  }
+
+  input[type="text"]:hover,
+  input[type="text"]:focus,
+  input[type="tel"]:hover,
+  input[type="tel"]:focus,
+  input[type="email"]:hover,
+  input[type="email"]:focus,
+  textarea:hover,
+  textarea:focus {
+    border-color: #63d1bb;
+  }
+
+  input[type="tel"]:hover ~ &-icon svg,
+  input[type="tel"]:focus ~ &-icon svg,
+  input[type="email"]:hover ~ &-icon svg,
+  input[type="email"]:focus ~ &-icon svg {
+    fill: #63d1bb;
+  }
+
+  input[type="text"] {
+    padding: 15px 0;
+    margin-bottom: 0;
+
+    @include tablet {
+      padding: 11px 18px 13px 18px;
+    }
+  }
+
+  input[type="tel"],
+  input[type="email"] {
+    padding: 0 40px 15px 0;
+
+    @include tablet {
+      padding: 17px 60px 12px 16px;
+    }
+  }
+
+  textarea {
+    height: 142px;
+    border: 2px solid #444444;
+    color: #444444;
+    resize: none;
+    padding: 15px;
+    outline: none;
+  }
+}
+
+.order-form__field_color {
+  @include tablet {
+    width: 50%;
+  }
+
+  @include desktop {
+    width: 33.3%;
+    //width: 262px;
+  }
+}
+
+.order-form__field label {
+  font-size: 17px;
+  line-height: (18/17);
+  font-weight: bold;
+  display: block;
+  color: $secondary;
+
+  @include tablet {
+    font-size: 19px;
+    line-height: (18/19);
+    padding-right: 25px;
+  }
+}
+
+.order-form__field input[type="text"],
+.order-form__field input[type="tel"],
+.order-form__field input[type="email"],
+.order-form__field textarea {
+  font-size: 17px;
+  line-height: (18/17);
+  font-family: $font-family;
+  width: 100%;
+
+  @include tablet {
+    font-size: 19px;
+    line-height: (18/19);
+  }
+}
+
+.order-form__field input[type="text"]::placeholder,
+.order-form__field input[type="tel"]::placeholder,
+.order-form__field input[type="email"]::placeholder,
+.order-form__field textarea::placeholder {
+  color: rgba($secondary, 0.3);
+}
+
+.order-form__field-icon {
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  text-align: center;
+
+  svg {
+    fill: rgba($secondary, 0.2);
+  }
+
+  @include tablet {
+    right: 16px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include desktop {
+    right: 0;
+  }
+}
+
+.order-form__footer {
+  margin-top: -20px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -6px;
+  }
+
+  @include desktop {
+    padding: 0 225px;
+  }
+}
+
+.order-form__note {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: (16/14);
+
+  @include tablet {
+    order: 1;
+    margin-bottom: 0;
+    font-size: 17px;
+    line-height: (30/17);
+  }
+}
+
+.order-form__send-button {
+  background: none;
+  width: 100%;
+  cursor: pointer;
+
+  @include tablet {
+    width: auto;
+    padding: 0 30px;
   }
 }
