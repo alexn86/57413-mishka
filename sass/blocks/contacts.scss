@@ -8,209 +8,218 @@
   @include desktop {
     margin-bottom: 105px;
   }
+}
 
-  &__wrapper {
-    padding-top: 8px;
+.contacts__wrapper {
+  padding-top: 8px;
 
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-      padding-top: 0;
-    }
-
-    @include desktop {
-      position: relative;
-      width: 50%;
-      min-height: 470px;
-      padding-right: 30px;
-      flex-direction: column;
-      padding-left: 175px;
-    }
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
   }
 
-  &__header {
-    //padding-top: 10px;
-    margin-bottom: 23px;
-
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 5px;
-      margin-bottom: 29px;
-    }
-
-    @include desktop {
-      padding-top: 85px;
-      position: relative;
-      justify-content: flex-start;
-      margin-bottom: 45px;
-    }
-  }
-
-  &__icon-flag {
-    display: none;
-
-    @include tablet {
-      display: block;
-    }
-
-    @include desktop {
-      position: absolute;
-      left: -110px;
-      top: 75px;
-    }
-  }
-
-  &__title {
-    font-size: 18px;
-    line-height: (30/18);
-    font-weight: bold;
-
-    @include tablet {
-      font-size: 43px;
-      line-height: (50/43);
-    }
-
-    @include desktop {
-      order: 1;
-      font-size: 53px;
-      line-height: (57/53);
-    }
-  }
-
-  &__details {
-    width: 100%;
-    margin-bottom: 3px;
-
-    @include tablet {
-      margin-bottom: 53px;
-    }
-
-    @include desktop {
-      margin-bottom: 0;
-    }
-  }
-
-  &__details tbody {
-    @include tablet {
-      display: flex;
-    }
-
-    @include desktop {
-      flex-direction: column;
-    }
-  }
-
-  &__item {
-    @include tablet {
-      width: 50%;
-    }
-
-    @include desktop {
-      width: 100%;
-    }
-  }
-
-  &__type,
-  &__value {
-    vertical-align: top;
-    text-align: left;
-    padding-bottom: 30px;
-    line-height: (30/15);
-
-    @include tablet {
-      padding-bottom: 0;
-      font-size: 17px;
-      line-height: (30/17);
-    }
-
-    @include desktop {
-      padding-bottom: 25px;
-    }
-  }
-
-  &__value {
-    padding-left: 25px;
-
-    //@include tablet {
-    //  padding-left: 30px;
-    //}
-    @include tablet {
-      padding-left: 20px;
-    }
-  }
-
-  &__type {
-    width: auto;
-  }
-
-  &__email {
-    color: $primary;
-    border-bottom: 1px solid #62d1ba;
-    text-decoration: none;
-    padding-bottom: 5px;
-  }
-
-  &__email:hover {
-    color: #46c1ae;
-    border-bottom: 1px solid #46c1ae;
-  }
-
-  &__email:active {
-    color: rgba(#46c1ae, 0.3);
-    border-bottom: 1px solid rgba(#46c1ae, 0.3);
-  }
-
-  &__map {
-    margin-bottom: 40px;
+  @include desktop {
     position: relative;
-    left: -30px;
-    margin-right: -60px;
+    width: 50%;
+    min-height: 470px;
+    padding-right: 30px;
+    flex-direction: column;
+    padding-left: 175px;
+  }
+}
 
-    @include tablet {
-      left: -50px;
-      margin-right: -100px;
-      margin-bottom: 55px;
-    }
+.contacts__header {
+  //padding-top: 10px;
+  margin-bottom: 23px;
 
-    @include desktop {
-      margin-right: 0;
-      position: absolute;
-      top: 10px;
-      left: 100%;
-      width: 100%;
-    }
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    margin-bottom: 29px;
   }
 
-  &__map-pic {
-    //height: 100vh;
-    height: 457px;
-    width: 100%;
+  @include desktop {
+    padding-top: 85px;
+    position: relative;
+    justify-content: flex-start;
+    margin-bottom: 45px;
+  }
+}
 
-    @include tablet {
-      //height: 460px;
-    }
+.contacts__icon-flag {
+  display: none;
+
+  @include tablet {
+    display: block;
   }
 
-  &__map-pin {
+  @include desktop {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    //transform: translate(-50%, -50%);
-    transform: translate(-32%, -83%);
+    left: -110px;
+    top: 75px;
+  }
+}
+
+.contacts__title {
+  font-size: 18px;
+  line-height: (30/18);
+  font-weight: bold;
+
+  @include tablet {
+    font-size: 43px;
+    line-height: (50/43);
   }
 
-  &__write-button {
-    @include tablet {
-      display: inline-block;
-      padding: 0 40px;
-      align-self: center;
-    }
+  @include desktop {
+    order: 1;
+    font-size: 53px;
+    line-height: (57/53);
+  }
+}
 
-    @include desktop {
-      align-self: flex-start;
-      margin-top: auto;
-    }
+.contacts__details {
+  width: 100%;
+  margin-bottom: 3px;
+
+  @include tablet {
+    margin-bottom: 53px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__details tbody {
+  @include tablet {
+    display: flex;
+  }
+
+  @include desktop {
+    flex-direction: column;
+  }
+}
+
+.contacts__item {
+  @include tablet {
+    width: 50%;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.contacts__type,
+.contacts__value {
+  vertical-align: top;
+  text-align: left;
+  padding-bottom: 30px;
+  line-height: (30/15);
+
+  @include tablet {
+    padding-bottom: 0;
+    font-size: 17px;
+    line-height: (30/17);
+  }
+
+  @include desktop {
+    padding-bottom: 25px;
+  }
+}
+
+.contacts__value {
+  padding-left: 25px;
+
+  @include tablet {
+    padding-left: 20px;
+  }
+}
+
+.contacts__type {
+  width: auto;
+}
+
+.contacts__email {
+  color: $primary;
+  border-bottom: 1px solid #62d1ba;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.contacts__email:hover {
+  color: #46c1ae;
+  border-bottom: 1px solid #46c1ae;
+}
+
+.contacts__email:active {
+  color: rgba(#46c1ae, 0.3);
+  border-bottom: 1px solid rgba(#46c1ae, 0.3);
+}
+
+.contacts__map {
+  margin-bottom: 40px;
+  position: relative;
+  left: -30px;
+  margin-right: -60px;
+
+  @include tablet {
+    left: -50px;
+    margin-right: -100px;
+    margin-bottom: 55px;
+  }
+
+  @include desktop {
+    margin-right: 0;
+    position: absolute;
+    top: 10px;
+    left: 100%;
+    width: 100%;
+  }
+}
+
+.contacts__map-pic {
+  height: 457px;
+  width: 100%;
+  display: none;
+}
+
+.contacts__map-pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  //transform: translate(-50%, -50%);
+  transform: translate(-32%, -83%);
+  display: none;
+}
+
+.contacts__map_no-js .contacts__map-pic,
+.contacts__map_no-js .contacts__map-pin {
+  display: block;
+}
+
+.contacts__map-container {
+  width: 100%;
+  height: 457px;
+  display: block;
+}
+
+.contacts__map_no-js .contacts__map-container {
+  display: none;
+}
+
+.contacts__write-button {
+  @include tablet {
+    display: inline-block;
+    padding: 0 40px;
+    align-self: center;
+  }
+
+  @include desktop {
+    align-self: flex-start;
+    margin-top: auto;
   }
 }

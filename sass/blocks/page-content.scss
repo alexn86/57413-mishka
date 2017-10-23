@@ -1,9 +1,7 @@
-.page-content {
-  &__form {
-    margin-bottom: 55px;
+.page-content__form {
+  margin-bottom: 55px;
 
-    @include desktop {
-      margin-bottom: 50px;
-    }
+  @include desktop {
+    margin-bottom: 50px;
   }
 }

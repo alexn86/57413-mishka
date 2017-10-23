@@ -22,18 +22,9 @@
     top: 0;
     right: 0;
     background-repeat: repeat;
-
-    @include tablet {
-      //background-size: 54px 36px !important;
-    }
   }
 
   &::before {
-    //height: 5px;
-    //background: radial-gradient(8px, transparent, transparent 4px, black 5px, black 7px, transparent 8px);
-    //background-size: 20px 16px;
-    //background-position-x: -10px;
-
     height: 4px;
     background: radial-gradient(8px, transparent, transparent 3px, #f1f1f1 4px, #f1f1f1 5px, transparent 6px);
     background-size: 16px 12px;
@@ -55,12 +46,6 @@
   }
 
   &::after {
-    //height: 5px;
-    //background: radial-gradient(8px, transparent, transparent 4px, black 5px, black 7px, transparent 8px);
-    //background-size: 20px 15px;
-    //top: 4px;
-    //background-position: 0 -10px;
-
     height: 4px;
     background: radial-gradient(8px, transparent, transparent 3px, #f1f1f1 4px, #f1f1f1 5px, transparent 6px);
     background-size: 16px 16px;

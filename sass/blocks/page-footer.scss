@@ -4,79 +4,77 @@
   @include tablet {
     height: 142px;
   }
+}
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    height: 100%;
+  }
+}
 
-    @include tablet {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
+.page-footer__logo {
+  flex-shrink: 0;
+  display: none;
+
+  @include tablet {
+    width: 33.3%;
+    display: block;
+  }
+}
+
+.page-footer__logo-link {
+  fill: #231f20;
+  display: inline-block;
+
+  &:hover {
+    fill: #46c1ae;
   }
 
-  &__logo {
-    flex-shrink: 0;
-    display: none;
-
-    @include tablet {
-      //flex-grow: 1;
-      width: 33.3%;
-      display: block;
-    }
+  &:active {
+    fill: rgba(#46c1ae, 0.3);
   }
+}
 
-  &__logo-link {
-    fill: #231f20;
-    display: inline-block;
+.page-footer__logo-pic {
+  display: none;
 
-    &:hover {
-      fill: #46c1ae;
-    }
-
-    &:active {
-      fill: rgba(#46c1ae, 0.3);
-    }
+  @include tablet {
+    display: block;
   }
+}
 
-  &__logo-pic {
-    display: none;
+.page-footer__socials {
+  flex-basis: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
 
-    @include tablet {
-      display: block;
-    }
+  @include tablet {
+    border: none;
+    flex-grow: 1;
+    width: 33.3%;
   }
+}
 
-  &__socials {
-    flex-basis: 80px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #e5e5e5;
-    width: 100%;
+.page-footer__copyright {
+  text-align: center;
+  flex-basis: 80px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 
-    @include tablet {
-      border: none;
-      //flex-basis: auto;
-      flex-grow: 1;
-      width: 33.3%;
-    }
-  }
-
-  &__copyright {
-    text-align: center;
-    flex-basis: 80px;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-
-    @include tablet {
-      flex-grow: 1;
-      justify-content: flex-end;
-      width: 33.3%;
-    }
+  @include tablet {
+    flex-grow: 1;
+    justify-content: flex-end;
+    width: 33.3%;
   }
 }

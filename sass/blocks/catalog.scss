@@ -1,27 +1,26 @@
-.catalog {
-  &__list {
-    display: flex;
-    flex-direction: column;
+.catalog__list {
+  display: flex;
+  flex-direction: column;
 
-    @include desktop {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-
-  &__item {
-    margin-bottom: 31px;
-
-    &:hover {
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    &:active {
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    @include tablet {
-      margin-bottom: 52px;
-    }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
+
+.catalog__item {
+  margin-bottom: 31px;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  @include tablet {
+    margin-bottom: 52px;
+  }
+}
+
