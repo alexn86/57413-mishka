@@ -2,7 +2,7 @@
 
 * Студент: [Александр Никольский](https://up.htmlacademy.ru/adaptive/12/user/57413).
 * Наставник: [Александр Собакарь](https://up.htmlacademy.ru/adaptive/12/user/128451).
-* Сайт: [mishka.nikolskiy.me](http://mishka.nikolskiy.me).
+* Сайт: [http://mishka.nikolskiy.me](http://mishka.nikolskiy.me).
 
 ---
 
