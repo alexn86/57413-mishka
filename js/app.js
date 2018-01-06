@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Необходимо указать данный тип макета.
       iconLayout: "default#image",
       // Своё изображение иконки метки.
-      iconImageHref: "./../img/icon-map-pin.svg",
+      iconImageHref: "../img/icon-map-pin.svg",
       // Размеры метки.
       iconImageSize: [66, 100],
       // Смещение левого верхнего угла иконки относительно
