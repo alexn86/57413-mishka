@@ -1,10 +1,17 @@
-version: 1
-test:
-  override:
-  - "true"
+version: 2
+jobs:
+  deploy:
+    steps:
+      - checkout
+      - run:
+          name: copy
+          command: - scp -r * admin_ftp_11@vps-1049136-17732.host4g.ru:/mishka
 
-deployment:
-  production:
-    branch: master
-    commands:
-    - scp -r * admin_ftp_11@vps-1049136-17732.host4g.ru:/mishka
+workflows:
+  version: 2
+  release:
+    jobs:
+    - deploy:
+        filters:
+          branches:
+            only: master
