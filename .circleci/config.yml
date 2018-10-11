@@ -1,0 +1,9 @@
+test:
+  override:
+  - "true"
+
+deployment:
+  production:
+    branch: master
+    commands:
+    - scp -r * admin_ftp_11@vps-1049136-17732.host4g.ru:/mishka
