@@ -5,9 +5,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: copy
-#          command: rsync -av * admin_ftp_11@vps-1049136-17732.host4g.ru:~/mishka
-            command: git pull origin master
+          name: pull
+          command: git pull origin master
 
 workflows:
   version: 2
