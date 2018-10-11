@@ -6,7 +6,7 @@ jobs:
       - checkout
       - run:
           name: copy
-          command: scp -r * admin_ftp_11@vps-1049136-17732.host4g.ru:~/mishka
+          command: scp -rp * admin_ftp_11@vps-1049136-17732.host4g.ru:~/mishka
 
 workflows:
   version: 2
