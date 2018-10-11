@@ -4,9 +4,6 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run:
-          name: copy
-          command: rsync -avzP * admin_ftp_11@vps-1049136-17732.host4g.ru:~/mishka
 
 workflows:
   version: 2
