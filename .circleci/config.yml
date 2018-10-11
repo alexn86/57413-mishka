@@ -1,9 +1,13 @@
 version: 2
 jobs:
   deploy:
-    machine: true
+    machine:
+      enabled: true
     steps:
-      - checkout
+      - run:
+          name: Deploy Over SSH
+          command: |
+            ssh admin_ftp_11@vps-1049136-17732.host4g.ru 'cd ~/mishka && git pull origin master'
 
 workflows:
   version: 2
